@@ -1,5 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"E:\yimishiji\emiya\public/../application/admin\view\index\index.html";i:1505976694;}*/ ?>
-
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"E:\yimishiji\emiya\public/../application/admin\view\index\index.html";i:1506076073;}*/ ?>
 <?php echo widget("Widget/header"); ?>
 	<!-- /头部 -->
 	
@@ -35,7 +34,6 @@
     <script src="__STATIC__/admin/style/jquery.js"></script>
     <!--Beyond Scripts-->
     <script src="__STATIC__/admin/style/beyond.js"></script>
-    
 
 
 </body></html>

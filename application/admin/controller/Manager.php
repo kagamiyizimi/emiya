@@ -63,13 +63,13 @@ class Manager extends Controller{
             "username"=>input("username"),
             "create_time"=>time(),
         ];
-        //dump($data);exit;
         //判断是否冻结
         if(input("lock")=="0"){
             $data["lock"]="1";
         }else{
             $data["lock"]="0";
         }
+        //dump($data);exit;
         $password=input("password");
         if($password !==""){
             $data["password"]=md5($password);

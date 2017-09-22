@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"E:\yimishiji\emiya\public/../application/admin\view\goods\add.html";i:1506076383;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -256,14 +257,14 @@
 </head>
 <body>
 <!-- 头部 -->
-{:widget("Widget/header")}
+<?php echo widget("Widget/header"); ?>
 
 <!-- /头部 -->
 
 <div class="main-container container-fluid">
     <div class="page-container">
         <!-- Page Sidebar -->
-        {:widget("Widget/left")}
+        <?php echo widget("Widget/left"); ?>
         <!-- /Page Sidebar -->
         <!-- Page Content -->
         <div class="page-content">
@@ -274,7 +275,7 @@
                         <a href="#">系统</a>
                     </li>
                     <li>
-                        <a href="{:url('Goods/index')}">商品列表</a>
+                        <a href="<?php echo url('Goods/index'); ?>">商品列表</a>
                     </li>
                     <li class="active">添加商品</li>
                 </ul>
@@ -293,7 +294,7 @@
                             <div class="widget-body">
                                 <div id="horizontal-form">
                                     <form class="form-horizontal" role="form"
-                                          action="{:url('Goods/add')}"
+                                          action="<?php echo url('Goods/add'); ?>"
                                           method="post" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <label for="goods_name"
@@ -318,9 +319,9 @@
                                             <div class="col-sm-1">
                                                 <select id="cate_id" name="cate_id" style="width: 260%;">
                                                     <option value="">--请选择--</option>
-                                                   {foreach $cateData as $v}
-                                                    <option value="{$v.cate_id}">{$v.name}</option>
-                                                   {/foreach}
+                                                   <?php foreach($cateData as $v): ?>
+                                                    <option value="<?php echo $v['cate_id']; ?>"><?php echo $v['name']; ?></option>
+                                                   <?php endforeach; ?>
                                                 </select>
                                             </div>
 
