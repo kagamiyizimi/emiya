@@ -9,63 +9,124 @@
     <!-- Sidebar Menu -->
     <ul class="nav sidebar-menu">
         <!--Dashboard-->
+        <!--管理员-->
         <li>
             <a href="#" class="menu-dropdown">
-                <i class="menu-icon fa fa-list-ul"></i>
-                <span class="menu-text">分类管理</span>
+                <i class="menu-icon fa fa-user"></i>
+                <span class="menu-text">管理员</span>
+                <i class="menu-expand"></i>
+            </a>
+            <ul class="submenu">
+                <li>
+                    <a href="{:url('Manager/lis')}">
+                                    <span class="menu-text">
+                                        管理列表                                    </span>
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!--客户-->
+        <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-user"></i>
+                <span class="menu-text">会员</span>
+                <i class="menu-expand"></i>
+            </a>
+            <ul class="submenu">
+                <li>
+                    <a href="{:url('Manager/lis')}">
+                                    <span class="menu-text">会员列表</span>
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!--商品-->
+        <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-list"></i>
+                <span class="menu-text">分类</span>
                 <i class="menu-expand"></i>
             </a>
             <ul class="submenu">
                 <li>
                     <a href="{:url('Cate/index')}">
-                        <span class="menu-text">分类列表</span>
+                                    <span class="menu-text">分类列表</span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>
                 <li>
                     <a href="{:url('Cate/add')}">
-                        <span class="menu-text">添加顶级分类</span>
+                                    <span class="menu-text">添加顶级分类</span>
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="{:url('Cate/addChild')}">
+                                    <span class="menu-text">添加子分类</span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>
             </ul>
         </li>
-
+        <!--商品-->
         <li>
             <a href="#" class="menu-dropdown">
                 <i class="menu-icon fa fa-file-text"></i>
-                <span class="menu-text">文档</span>
+                <span class="menu-text">商品</span>
                 <i class="menu-expand"></i>
             </a>
             <ul class="submenu">
                 <li>
                     <a href="/admin/document/index.html">
                                     <span class="menu-text">
-                                        文章列表                                    </span>
+                                        商品列表                                    </span>
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/document/index.html">
+                                    <span class="menu-text">
+                                        商品图片                                    </span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>
             </ul>
         </li>
-
+        <!--订单-->
         <li>
             <a href="#" class="menu-dropdown">
-                <i class="menu-icon fa fa-gear"></i>
-                <span class="menu-text">系统</span>
+                <i class="menu-icon fa fa-file-text"></i>
+                <span class="menu-text">订单</span>
                 <i class="menu-expand"></i>
             </a>
             <ul class="submenu">
                 <li>
                     <a href="/admin/document/index.html">
                                     <span class="menu-text">
-                                        配置                                   </span>
+                                        订单详情                                   </span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>
             </ul>
         </li>
-
-
+        <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-file-text"></i>
+                <span class="menu-text">地址</span>
+                <i class="menu-expand"></i>
+            </a>
+            <ul class="submenu">
+                <li>
+                    <a href="/admin/document/index.html">
+                                    <span class="menu-text">
+                                        地址详情                                   </span>
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
+            </ul>
+        </li>
     </ul>
     <!-- /Sidebar Menu -->
 </div>

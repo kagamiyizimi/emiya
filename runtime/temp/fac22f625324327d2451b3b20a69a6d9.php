@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:78:"D:\php_project\test2\emiya\public/../application/admin\view\widget\header.html";i:1505904462;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:78:"D:\php_project\test2\emiya\public/../application/admin\view\widget\header.html";i:1506066186;}*/ ?>
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8">
@@ -29,7 +29,7 @@
             <div class="navbar-header pull-left">
                 <a href="#" class="navbar-brand">
                     <small>
-                        <img src="images/logo.png" alt="">
+                        <img src="__STATIC__/admin/images/logo.png" alt="">
                     </small>
                 </a>
             </div>
@@ -46,7 +46,7 @@
                         <li>
                             <a class="login-area dropdown-toggle" data-toggle="dropdown">
                                 <div class="avatar" title="View your public profile">
-                                    <img src="images/adam-jansen.jpg">
+                                    <img src="__STATIC__/admin/images/adam-jansen.jpg">
                                 </div>
                                 <section>
                                     <h2><span class="profile"><span>admin</span></span></h2>
