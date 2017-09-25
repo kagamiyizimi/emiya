@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"E:\yimishiji\emiya\public/../application/admin\view\goods\list.html";i:1506076073;s:70:"E:\yimishiji\emiya\public/../application/admin\view\widget\header.html";i:1505976427;s:68:"E:\yimishiji\emiya\public/../application/admin\view\widget\left.html";i:1506076484;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"E:\yimishiji\emiya\public/../application/admin\view\widget\left.html";i:1506079328;}*/ ?>
 
 <!-- Page Sidebar -->
 <div class="page-sidebar" id="sidebar">
@@ -38,7 +38,7 @@
             </a>
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo url('Manager/lis'); ?>">
+                    <a href="<?php echo url('Member/index'); ?>">
                                     <span class="menu-text">
                                         会员列表                                    </span>
                         <i class="menu-expand"></i>

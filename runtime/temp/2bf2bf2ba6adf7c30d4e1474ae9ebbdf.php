@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"E:\yimishiji\emiya\public/../application/admin\view\manager\list.html";i:1506062278;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"E:\yimishiji\emiya\public/../application/admin\view\manager\list.html";i:1506077833;}*/ ?>
 <?php echo widget("Widget/header"); ?>
 
 <!-- /头部 -->
@@ -53,7 +53,7 @@
                                             <td align="center"><?php echo date("y-m-d",$v['create_time']); ?></td>
                                             <td align="center"><?php echo $v['lock']=="1"?"是":"否"; ?></td>
                                             <!--<td align="center"><?php echo $v['ip']; ?></td>-->
-                                            <td align="center"><?php echo $v['login_time']; ?></td>
+                                            <td align="center"><?php echo date("y-m-d",$v['login_time']); ?></td>
                                             <td align="center">
                                                 <a href="<?php echo url("Manager/edit",array("id"=>$v['manager_id'])); ?>"
                                                    class="btn btn-primary btn-sm shiny" >

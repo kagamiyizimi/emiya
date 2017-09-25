@@ -6,23 +6,20 @@
  * Time: 14:34
  */
 namespace app\admin\controller;
-
 use think\Controller;
 use think\Db;
+use think\Validate;
 class Manager extends Controller{
     //管理员列表
     public function lis(){
-
         $data=Db::name("manager")->paginate(10);
         //分配到模板
          $this->assign("data",$data);
-
-
         return $this->fetch("list");
     }
 
 
-    //添加列表
+    //添加管理列表
     public function add(){
         //判断传输方式
         if(request()->isPost()){
@@ -30,9 +27,25 @@ class Manager extends Controller{
                 "username"=>input("username"),
                 "password"=>input("password"),
                 "create_time"=>time(),
+                "login_time"=>time()
             ];
+
             $data["password"]=md5($data["password"]);
-//            dump($data);exit;
+
+            $validate = \think\Loader::validate('Manager');
+            if(!$validate->check($data)){
+                return $this->error($validate->getError());
+            }
+            //验正管理员是否唯一且不为空
+//            $validate=new Validate([
+//                "username"=>"require|max:50|min:2",
+//                "password"=>"require|min:2",
+//            ]);
+//            if(!$validate->check($data)){
+//                //dump($validate->getError());exit;
+//               return $this->error($validate->getError());
+//            }
+
             //保存数据
             $res=Db::name("manager")->insert($data);
             if($res){
@@ -46,7 +59,7 @@ class Manager extends Controller{
 
 
 
-    //修改
+    //修改管理员信息
     public function edit(){
 
         $id=input("id");
@@ -74,9 +87,13 @@ class Manager extends Controller{
         if($password !==""){
             $data["password"]=md5($password);
         }
-
+        $validate = \think\Loader::validate('Manager');
+        if(!$validate->check($data)){
+            return $this->error($validate->getError());
+        }
         //保存修改数据
         $res=Db::name("manager")->update($data);
+
         if($res !== false){
             return $this->success("修改成功",url("Manager/lis"));
         }else{
@@ -93,8 +110,7 @@ class Manager extends Controller{
 
 
 
-
-    //删除
+    //删除管理员
     public function del(){
         $id=input("id");
         $res=Db::name("manager")->delete($id);
