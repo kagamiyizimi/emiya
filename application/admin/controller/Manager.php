@@ -6,10 +6,11 @@
  * Time: 14:34
  */
 namespace app\admin\controller;
+use think\Controller;
 use think\Db;
-use app\admin\controller\Base;
+//use app\admin\controller\Base;
 
-class Manager extends Base{
+class Manager extends Base {
     //管理员列表
     public function lis(){
         $data=Db::name("manager")->paginate(10);
@@ -113,7 +114,6 @@ class Manager extends Base{
             return $this->error("删除失败");
         }
     }
-
 
 
 

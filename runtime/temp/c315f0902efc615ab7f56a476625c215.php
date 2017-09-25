@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"E:\yimishiji\emiya\public/../application/admin\view\index\index.html";i:1506076073;s:70:"E:\yimishiji\emiya\public/../application/admin\view\widget\header.html";i:1506327697;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"E:\yimishiji\emiya\public/../application/admin\view\goods\list.html";i:1506076073;s:70:"E:\yimishiji\emiya\public/../application/admin\view\widget\header.html";i:1506336242;}*/ ?>
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8">
@@ -56,7 +56,7 @@
                             <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
                                 <li class="username"><a>David Stevenson</a></li>
                                 <li class="dropdown-footer">
-                                    <a href="<?php echo url('Manager/outLogin'); ?>" >
+                                    <a href="<?php echo url('Index/outLogin'); ?>" >
                                         退出登录
                                     </a>
                                 </li>

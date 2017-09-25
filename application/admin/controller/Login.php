@@ -10,10 +10,13 @@ namespace app\admin\controller;
 use think\Controller;
 
 class Login extends Controller{
+
+
     //加载到登录页面
     public function index(){
         return $this->fetch("Login/login");
     }
+
     //执行登录
     public function goLogin(){
         $data=[
@@ -50,6 +53,7 @@ class Login extends Controller{
         return $this->success("登录成功",url("Index/index"));
 
     }
+
 
 
 
