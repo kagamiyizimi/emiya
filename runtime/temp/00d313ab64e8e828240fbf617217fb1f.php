@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:76:"D:\php_project\test2\emiya\public/../application/index\view\index\index.html";i:1506322570;s:78:"D:\php_project\test2\emiya\public/../application/index\view\widget\header.html";i:1506322595;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:76:"D:\php_project\test2\emiya\public/../application/index\view\index\index.html";i:1506322570;s:78:"D:\php_project\test2\emiya\public/../application/index\view\widget\header.html";i:1506328536;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="__STATIC__/index/css/repair.css">
     <script src="__STATIC__/index/JQ/jquery-3.2.1.min.js"></script>
     <script src="__STATIC__/index/js/header.js"></script>
+    <link rel="stylesheet" href="__STATIC__/index/css/repair.css">
     <link href="__STATIC__/index/css/footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="__STATIC__/index/css/login.css">
     <link rel="stylesheet" href="__STATIC__/index/css/header.css">
     <link rel="stylesheet" href="__STATIC__/index/css/bootstrap.css">
     <link rel="stylesheet" href="__STATIC__/index/css/animate.css">

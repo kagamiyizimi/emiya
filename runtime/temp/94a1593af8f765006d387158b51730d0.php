@@ -1,3 +1,6 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"E:\yimishiji\emiya\public/../application/admin\view\widget\left.html";i:1506079328;}*/ ?>
+
+<!-- Page Sidebar -->
 <div class="page-sidebar" id="sidebar">
     <!-- Page Sidebar Header-->
     <div class="sidebar-header-wrapper">
@@ -18,7 +21,7 @@
             </a>
             <ul class="submenu">
                 <li>
-                    <a href="{:url('Manager/lis')}">
+                    <a href="<?php echo url('Manager/lis'); ?>">
                                     <span class="menu-text">
                                         管理列表                                    </span>
                         <i class="menu-expand"></i>
@@ -35,7 +38,7 @@
             </a>
             <ul class="submenu">
                 <li>
-                    <a href="{:url('Member/index')}">
+                    <a href="<?php echo url('Member/index'); ?>">
                                     <span class="menu-text">
                                         会员列表                                    </span>
                         <i class="menu-expand"></i>
@@ -46,26 +49,22 @@
         <!--商品-->
         <li>
             <a href="#" class="menu-dropdown">
-                <i class="menu-icon fa fa-list"></i>
+                <i class="menu-icon fa fa-file-text"></i>
                 <span class="menu-text">分类</span>
                 <i class="menu-expand"></i>
             </a>
             <ul class="submenu">
                 <li>
-                    <a href="{:url('Cate/index')}">
-                                    <span class="menu-text">分类列表</span>
+                    <a href="/admin/document/index.html">
+                                    <span class="menu-text">
+                                        添加顶级分类                                   </span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="{:url('Cate/add')}">
-                                    <span class="menu-text">添加顶级分类</span>
-                        <i class="menu-expand"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="{:url('Cate/addChild')}">
-                                    <span class="menu-text">添加子分类</span>
+                    <a href="/admin/document/index.html">
+                                    <span class="menu-text">
+                                        添加子分类                                   </span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>
@@ -80,7 +79,7 @@
             </a>
             <ul class="submenu">
                 <li>
-                    <a href="{:url('Goods/index')}">
+                    <a href="<?php echo url('Goods/index'); ?>">
                                     <span class="menu-text">
                                         商品列表                                    </span>
                         <i class="menu-expand"></i>

@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\php_project\test2\emiya\public/../application/admin\view\goods\list.html";i:1506324938;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,14 +23,14 @@
 </head>
 <body>
 <!-- 头部 -->
-{:widget("Widget/header")}
+<?php echo widget("Widget/header"); ?>
 
 <!-- /头部 -->
 
 <div class="main-container container-fluid">
     <div class="page-container">
         <!-- Page Sidebar -->
-        {:widget("Widget/left")}
+        <?php echo widget("Widget/left"); ?>
         <!-- /Page Sidebar -->
         <!-- Page Content -->
         <div class="page-content">
@@ -48,7 +49,7 @@
             <div class="page-body">
 
                 <button type="button" tooltip="添加商品" class="btn btn-sm btn-azure btn-addon"
-                        onClick="javascript:window.location.href = '{:url('Goods/add')}'"><i class="fa fa-plus"></i> Add
+                        onClick="javascript:window.location.href = '<?php echo url('Goods/add'); ?>'"><i class="fa fa-plus"></i> Add
                 </button>
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 col-xs-12">
@@ -75,38 +76,38 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        {foreach $data as $v}
+                                        <?php foreach($data as $v): ?>
                                         <tr>
-                                            <td align="center">{$v.goods_id}</td>
-                                            <td align="center">{$v.goods_name}</td>
+                                            <td align="center"><?php echo $v['goods_id']; ?></td>
+                                            <td align="center"><?php echo $v['goods_name']; ?></td>
                                             <td align="center">
                                                 <img src="" alt="" height="40" width="40">
                                             </td>
-                                            <td align="center">{$v.cate_id}</td>
-                                            <td align="center">{$v.sell_price}</td>
-                                            <td align="center">{$v.market_price}</td>
-                                            <td align="center">{$v.store}</td>
-                                            <td align="center">{$v.freez}</td>
-                                            <td align="center">{$v.maketable}</td>
-                                            <td align="center">{$v.keywords}</td>
-                                            <td align="center">{$v.last_modify_id}</td>
-                                            <td align="center">{$v.create_time|date="y-m-d",###}</td>
-                                            <td align="center">{$v.last_modify|date="y-m-d",###}</td>
+                                            <td align="center"><?php echo $v['cate_id']; ?></td>
+                                            <td align="center"><?php echo $v['sell_price']; ?></td>
+                                            <td align="center"><?php echo $v['market_price']; ?></td>
+                                            <td align="center"><?php echo $v['store']; ?></td>
+                                            <td align="center"><?php echo $v['freez']; ?></td>
+                                            <td align="center"><?php echo $v['maketable']; ?></td>
+                                            <td align="center"><?php echo $v['keywords']; ?></td>
+                                            <td align="center"><?php echo $v['last_modify_id']; ?></td>
+                                            <td align="center"><?php echo date("y-m-d",$v['create_time']); ?></td>
+                                            <td align="center"><?php echo date("y-m-d",$v['last_modify']); ?></td>
                                             <td align="center">
-                                                <a href="{:url('Image/index')}" class="btn btn-primary btn-sm shiny">
+                                                <a href="<?php echo url('Image/index'); ?>" class="btn btn-primary btn-sm shiny">
                                                     <i class="fa fa-edit"></i> 图片管理
                                                 </a>
-                                                <a href="{:url('Goods/edit')}" class="btn btn-primary btn-sm shiny">
+                                                <a href="<?php echo url('Goods/edit'); ?>" class="btn btn-primary btn-sm shiny">
                                                     <i class="fa fa-edit"></i> 编辑
                                                 </a>
-                                                <a href="{:url('Goods/del',array("id"=>$v.goods_id))}"
+                                                <a href="<?php echo url('Goods/del',array("id"=>$v['goods_id'])); ?>"
                                                    onClick="warning('{'确实要删除吗':'确实要撤销删除吗'}')"
                                                    class="btn btn-danger btn-sm shiny">
                                                     <i class="fa fa-trash-o"></i> 删除
                                                 </a>
                                             </td>
                                         </tr>
-                                        {/foreach}
+                                        <?php endforeach; ?>
                                         </tbody>
                                     </table>
                                 </div>

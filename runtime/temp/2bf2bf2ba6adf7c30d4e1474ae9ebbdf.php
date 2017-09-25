@@ -1,11 +1,12 @@
-{:widget("Widget/header")}
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"E:\yimishiji\emiya\public/../application/admin\view\manager\list.html";i:1506077833;}*/ ?>
+<?php echo widget("Widget/header"); ?>
 
 <!-- /头部 -->
 
 <div class="main-container container-fluid">
     <div class="page-container">
         <!-- Page Sidebar -->
-        {:widget("Widget/left")}
+        <?php echo widget("Widget/left"); ?>
         <!-- /Page Sidebar -->
         <!-- Page Content -->
         <div class="page-content">
@@ -24,7 +25,7 @@
             <div class="page-body">
 
                 <button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon"
-                        onClick="javascript:window.location.href = '{:url('Manager/add')}'"> <i class="fa fa-plus"></i> Add
+                        onClick="javascript:window.location.href = '<?php echo url("Manager/add"); ?>'"> <i class="fa fa-plus"></i> Add
                 </button>
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 col-xs-12">
@@ -45,26 +46,26 @@
                                         </thead>
 
                                         <tbody>
-                                        {foreach $data as $v}
+                                        <?php foreach($data as $v): ?>
                                         <tr>
-                                            <td align="center">{$v.manager_id}</td>
-                                            <td align="center">{$v.username}</td>
-                                            <td align="center">{$v.create_time|date="y-m-d",###}</td>
-                                            <td align="center">{$v.lock =="1"?"是":"否"}</td>
-                                            <!--<td align="center">{$v.ip}</td>-->
-                                            <td align="center">{$v.login_time|date="y-m-d",###}</td>
+                                            <td align="center"><?php echo $v['manager_id']; ?></td>
+                                            <td align="center"><?php echo $v['username']; ?></td>
+                                            <td align="center"><?php echo date("y-m-d",$v['create_time']); ?></td>
+                                            <td align="center"><?php echo $v['lock']=="1"?"是":"否"; ?></td>
+                                            <!--<td align="center"><?php echo $v['ip']; ?></td>-->
+                                            <td align="center"><?php echo date("y-m-d",$v['login_time']); ?></td>
                                             <td align="center">
-                                                <a href="{:url(\" Manager/edit\",array("id"=>$v.manager_id))}"
-                                                class="btn btn-primary btn-sm shiny" >
-                                                <i class="fa fa-edit"></i> 编辑
+                                                <a href="<?php echo url("Manager/edit",array("id"=>$v['manager_id'])); ?>"
+                                                   class="btn btn-primary btn-sm shiny" >
+                                                    <i class="fa fa-edit"></i> 编辑
                                                 </a>
-                                                <a href="#" onClick="warning('确实要删除吗', '{:url(\" Manager/del\",array("id"=>$v.manager_id))}')"
-                                                class="btn btn-danger btn-sm shiny">
-                                                <i class="fa fa-trash-o"></i> 删除
+                                                <a href="#" onClick="warning('确实要删除吗', '<?php echo url("Manager/del",array("id"=>$v['manager_id'])); ?>')"
+                                                   class="btn btn-danger btn-sm shiny">
+                                                    <i class="fa fa-trash-o"></i> 删除
                                                 </a>
                                             </td>
                                         </tr>
-                                        {/foreach}
+                                        <?php endforeach; ?>
                                         </tbody>
 
                                     </table>
@@ -75,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-                {$data->render()}
+<?php echo $data->render(); ?>
             </div>
             <!-- /Page Body -->
         </div>

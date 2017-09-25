@@ -191,7 +191,7 @@ class Loader
     private static function addPsr4($prefix, $paths, $prepend = false)
     {
         if (!$prefix) {
-            // Register directories for the root namespace.
+            // Reg directories for the root namespace.
             if ($prepend) {
                 self::$fallbackDirsPsr4 = array_merge(
                     (array) $paths,
@@ -204,7 +204,7 @@ class Loader
                 );
             }
         } elseif (!isset(self::$prefixDirsPsr4[$prefix])) {
-            // Register directories for a new namespace.
+            // Reg directories for a new namespace.
             $length = strlen($prefix);
             if ('\\' !== $prefix[$length - 1]) {
                 throw new \InvalidArgumentException("A non-empty PSR-4 prefix must end with a namespace separator.");
@@ -363,7 +363,7 @@ class Loader
      * @return object
      * @throws ClassNotFoundException
      */
-    public static function model($name = '', $layer = 'model', $appendSuffix = false, $common = 'widget')
+    public static function model($name = '', $layer = 'model', $appendSuffix = false, $common = 'common')
     {
         $guid = $name . $layer;
         if (isset(self::$instance[$guid])) {
@@ -434,7 +434,7 @@ class Loader
      * @return object|false
      * @throws ClassNotFoundException
      */
-    public static function validate($name = '', $layer = 'validate', $appendSuffix = false, $common = 'widget')
+    public static function validate($name = '', $layer = 'validate', $appendSuffix = false, $common = 'common')
     {
         $name = $name ?: Config::get('default_validate');
         if (empty($name)) {
