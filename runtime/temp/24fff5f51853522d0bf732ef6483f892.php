@@ -1,11 +1,11 @@
-{:widget('Widget/header')}
-
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"E:\yimishiji\emiya\public/../application/admin\view\manager\edit.html";i:1506062645;}*/ ?>
+<?php echo widget("Widget/header"); ?>
 <!-- /头部 -->
 
 <div class="main-container container-fluid">
     <div class="page-container">
         <!-- Page Sidebar -->
-        {:widget('Widget/left')}
+        <?php echo widget("Widget/left"); ?>
         <!-- /Page Sidebar -->
         <!-- Page Content -->
         <div class="page-content">
@@ -16,9 +16,9 @@
                         <a href="#">系统</a>
                     </li>
                     <li>
-                        <a href="#">分类管理</a>
+                        <a href="<?php echo url('Manager/lis'); ?>">用户管理</a>
                     </li>
-                    <li class="active">添加分类</li>
+                    <li class="active">添加用户</li>
                 </ul>
             </div>
             <!-- /Page Breadcrumb -->
@@ -30,29 +30,42 @@
                     <div class="col-lg-12 col-sm-12 col-xs-12">
                         <div class="widget">
                             <div class="widget-header bordered-bottom bordered-blue">
-                                <span class="widget-caption">新增子分类</span>
+                                <span class="widget-caption">修改管理员信息</span>
                             </div>
                             <div class="widget-body">
                                 <div id="horizontal-form">
-                                    <form class="form-horizontal" role="form" action="{:url('Cate/addChild')}" method="post">
+                                    <form class="form-horizontal" role="form" action="<?php echo url('Manager/saveEdit'); ?>" method="post">
                                         <div class="form-group">
-                                            <label for="cataname"
-                                                   class="col-sm-2 control-label no-padding-right">所属分类</label>
+                                            <label for="username" class="col-sm-2 control-label no-padding-right">用户名</label>
                                             <div class="col-sm-6">
-                                                <input class="form-control" id="cataname" placeholder="" name="cataname"
-                                                       required="" type="text" disabled value="{$data.name}">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="name"
-                                                   class="col-sm-2 control-label no-padding-right">新增子分类名</label>
-                                            <div class="col-sm-6">
-                                                <input class="form-control" id="name" placeholder="" name="name"
-                                                       required="" type="text">
+                                                <input class="form-control" id="username" placeholder="" name="username" required="" type="text" value="<?php echo $data['username']; ?>">
                                             </div>
                                             <p class="help-block col-sm-4 red">* 必填</p>
                                         </div>
-                                        <input type="hidden" id="id" name="id" value="{$data.cate_id}">
+
+                                        <div class="form-group">
+                                            <label for="username" class="col-sm-2 control-label no-padding-right">用户密码</label>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" id="password" placeholder="" name="password" type="password" >
+                                            </div>
+
+                                        </div>
+                                        <!--隐藏域-->
+                                        <input type="hidden" name="manager_id" value="<?php echo $data['manager_id']; ?>">
+
+
+
+
+
+                                        <div class="form-group">
+                                            <label for="lock" class="col-sm-2 control-label no-padding-right">冻结管理员</label>
+                                            <div class="col-xs-4">
+                                                <label>
+                                                    <input class="checkbox-slider slider-icon yesno" name="lock" type="checkbox" value="<?php echo $data['lock']; ?>">
+                                                    <span class="text"></span>
+                                                </label>
+                                            </div>
+                                        </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-2 col-sm-10">
                                                 <button type="submit" class="btn btn-default">保存信息</button>
@@ -71,7 +84,6 @@
         <!-- /Page Content -->
     </div>
 </div>
-
 <!--Basic Scripts-->
 <script src="__STATIC__/admin/style/jquery_002.js"></script>
 <script src="__STATIC__/admin/style/bootstrap.js"></script>

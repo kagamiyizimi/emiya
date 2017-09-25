@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\php_project\test2\emiya\public/../application/admin\view\cate\list.html";i:1506329322;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"E:\yimishiji\emiya\public/../application/admin\view\cate\list.html";i:1506328563;}*/ ?>
 <?php echo widget('Widget/header'); ?>
 
 <!-- /头部 -->
@@ -61,7 +61,7 @@
                                                    class="btn btn-primary btn-sm shiny">
                                                     <i class="fa fa-edit"></i> 编辑
                                                 </a>
-                                                <a href="#" onClick="warning('确实要删除吗', '<?php echo url('Cate/del',['id'=>$v['cate_id']]); ?>)}')"
+                                                <a href="#" onClick="warning('确实要删除吗', '<?php echo url('Cate/del',['id'=>$v['cate_id']]); ?>')"
                                                    class="btn btn-danger btn-sm shiny">
                                                     <i class="fa fa-trash-o"></i> 删除
                                                 </a>

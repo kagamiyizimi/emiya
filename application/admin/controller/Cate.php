@@ -4,7 +4,7 @@ namespace app\admin\controller;
 use think\Controller;
 use app\admin\model\Cate as CateModel;
 
-class Cate extends Controller
+class Cate extends Base
 {
     public function index()
     {
