@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"E:\yimishiji\emiya\public/../application/admin\view\widget\header.html";i:1505976427;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"E:\yimishiji\emiya\public/../application/admin\view\index\index.html";i:1506076073;s:70:"E:\yimishiji\emiya\public/../application/admin\view\widget\header.html";i:1506327697;}*/ ?>
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8">
@@ -56,12 +56,12 @@
                             <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
                                 <li class="username"><a>David Stevenson</a></li>
                                 <li class="dropdown-footer">
-                                    <a href="/admin/user/logout.html">
+                                    <a href="<?php echo url('Manager/outLogin'); ?>" >
                                         退出登录
                                     </a>
                                 </li>
                                 <li class="dropdown-footer">
-                                    <a href="/admin/user/changePwd.html">
+                                    <a href="<?php echo url('Manager/edit'); ?>">
                                         修改密码
                                     </a>
                                 </li>
