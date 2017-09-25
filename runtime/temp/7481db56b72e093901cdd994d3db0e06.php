@@ -1,6 +1,7 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\php_project\test2\emiya\public/../application/index\view\index\index.html";i:1506322570;}*/ ?>
 
 <!--头部-->
-{:widget('Widget/header')}
+<?php echo widget('Widget/header'); ?>
 <!--导航栏-->
 
 <div class="nav_box">
@@ -831,6 +832,6 @@
 </div>
 
 <!--脚部-->
-{:widget('Widget/footer')}
+<?php echo widget('Widget/footer'); ?>
 </body>
 </html>

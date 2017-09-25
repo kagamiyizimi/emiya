@@ -124,6 +124,10 @@ class Cate extends Model{
 
         return $response;
     }
+    //左侧添加子分类
+    static public function addSecc(){
+
+    }
 
 }
 ?>
