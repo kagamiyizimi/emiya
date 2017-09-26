@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\goods\edit.html";i:1506327698;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\goods\edit.html";i:1506415929;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -289,7 +289,7 @@
                     <div class="col-lg-12 col-sm-12 col-xs-12">
                         <div class="widget">
                             <div class="widget-header bordered-bottom bordered-blue">
-                                <span class="widget-caption">新增商品</span>
+                                <span class="widget-caption">修改商品</span>
                             </div>
                             <div class="widget-body">
                                 <div id="horizontal-form">
@@ -316,11 +316,11 @@
                                         <div class="form-group">
                                             <label for="cate_id"
                                                    class="col-sm-2 control-label no-padding-right">所属分类</label>
-                                            <div class="col-sm-1">
-                                                <select id="cate_id" name="cate_id" style="width: 260%;">
+                                            <div class="col-sm-6">
+                                                <select id="cate_id" name="cate_id">
                                                     <option value="">--请选择--</option>
                                                    <?php foreach($cateData as $v): ?>
-                                                    <option value="<?php echo $v['cate_id']; ?>"><?php echo $v['name']; ?></option>
+                                                    <option value="<?php echo $v['cate_id']; ?>" <?php if($v['cate_id'] == $data['cate_id']): ?>selected="selected"<?php endif; ?>><?php echo $v['name']; ?></option>
                                                    <?php endforeach; ?>
                                                 </select>
                                             </div>
@@ -374,7 +374,7 @@
                                             <label for="maketable" class="col-sm-2 control-label no-padding-right">是否上架</label>
                                             <div class="col-xs-4">
                                                 <label>
-                                                    <input class="checkbox-slider slider-icon yesno" name="maketable" type="checkbox">
+                                                    <input class="checkbox-slider slider-icon yesno" name="maketable" type="checkbox" <?php if($data['maketable'] == 1): ?>checked="checked"<?php endif; ?>>
                                                     <span class="text"></span>
                                                 </label>
                                             </div>
@@ -383,7 +383,7 @@
                                         <div class="form-group">
                                             <label for="desc" class="col-sm-2 control-label no-padding-right">描述</label>
                                             <div class="col-sm-6">
-                                                <textarea name="desc" id="desc" cols="60" rows="2" class="form-control"></textarea>
+                                                <textarea name="desc" id="desc" cols="60" rows="2" class="form-control"><?php echo $data['desc']; ?></textarea>
                                             </div>
                                             <p class="help-block col-sm-4 red">* 必填</p>
                                         </div>
@@ -393,7 +393,7 @@
                                             <label for="content"
                                                    class="col-sm-2 control-label no-padding-right">商品详情</label>
                                             <div class="col-sm-6">
-                                                <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                                                <textarea name="content" id="content" cols="30" rows="10"><?php echo $data['content']; ?></textarea>
                                             </div>
                                         </div>
                                         <input type="hidden" id="goods_id" name="goods_id" value="<?php echo $data['goods_id']; ?>">

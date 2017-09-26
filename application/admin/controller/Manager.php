@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2017/9/21
- * Time: 14:34
- */
+
 namespace app\admin\controller;
 use think\Db;
 
@@ -114,7 +109,6 @@ class Manager extends Base{
 
     }
 
-
     //删除管理员
     public function del(){
         $id=input("id");
@@ -125,8 +119,6 @@ class Manager extends Base{
             return $this->error("删除失败");
         }
     }
-
-
 
 
 

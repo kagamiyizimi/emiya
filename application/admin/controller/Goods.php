@@ -24,7 +24,7 @@ class Goods extends Base
 //    添加商品
     public function add()
     {
-        $cateData=db('cate')->select();
+        $cateData=db('cate')->where('pid',0)->select();
         $this->assign('cateData',$cateData);
         //模型遍历分类表数据
         if (request()->isPost()) {
@@ -58,7 +58,7 @@ class Goods extends Base
                 return $this->error($validate->getError());
             }
 
-<<<<<<< HEAD
+
             $res= Db::name('goods')->insert($data);
             if ($res) {
                 return $this->success("添加成功", url("Goods/index"));
@@ -70,12 +70,14 @@ class Goods extends Base
     }
 //编辑商品
     public function edit(){
-        $cateData=db('cate')->select();
-        $this->assign('cateData',$cateData);
         $id=input('id');
 //        返回结果是一个一维数组
         $data=Db::name('goods')->find($id);
         $this->assign('data',$data);
+
+        $cateData=db('cate')->where('pid',0)->select();
+        $this->assign('cateData',$cateData);
+
         return $this->fetch();
     }
 //    执行编辑
@@ -127,25 +129,7 @@ class Goods extends Base
         }else{
             return $this->error("删除失败");
         }
-=======
-            $res = Db::name('goods')->insert($data);
-            if ($res){
-                return $this->success('添加成功',url('Goods/index'));
-            }else{
-                return $this->success('添加失败');
-            }
-        }
-        return $this->fetch();
->>>>>>> 800822c0df85b6481551b3f3ca621b00b1288e74
     }
-    public function del(){
-        $id=input("id");
-        $res=Db::name("goods")->delete($id);
-        if($res){
-            return $this->success("删除成功",url("Goods/index"));
-        }else{
-            return $this->error("删除失败");
-        }
-    }
+
 
 }

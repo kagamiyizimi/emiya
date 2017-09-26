@@ -39,7 +39,7 @@
                     <li>
                         <a href="#">系统</a>
                     </li>
-<<<<<<< HEAD
+
                                         <li class="active">商品管理</li>
                     </ul>
                 </div>
@@ -109,87 +109,9 @@
                     </table>
                 </div>
              {$data->render()}
-=======
-                    <li class="active">商品管理</li>
-                </ul>
->>>>>>> 800822c0df85b6481551b3f3ca621b00b1288e74
-            </div>
-            <!-- /Page Breadcrumb -->
-
-            <!-- Page Body -->
-            <div class="page-body">
-
-                <button type="button" tooltip="添加商品" class="btn btn-sm btn-azure btn-addon"
-                        onClick="javascript:window.location.href = '{:url('Goods/add')}'"><i class="fa fa-plus"></i> Add
-                </button>
-                <div class="row">
-                    <div class="col-lg-12 col-sm-12 col-xs-12">
-                        <div class="widget">
-                            <div class="widget-body">
-                                <div class="flip-scroll">
-                                    <table class="table table-bordered table-hover">
-                                        <thead class="">
-                                        <tr>
-                                            <th class="text-center">ID</th>
-                                            <th class="text-center">商品名称</th>
-                                            <th class="text-center">缩略图</th>
-                                            <th class="text-center">分类名</th>
-                                            <th class="text-center">销售价格</th>
-                                            <th class="text-center">市场价格</th>
-                                            <th class="text-center">库存</th>
-                                            <th class="text-center">冻结库存</th>
-                                            <th class="text-center">商品状态</th>
-                                            <th class="text-center">关键字</th>
-                                            <th class="text-center">更新人</th>
-                                            <th class="text-center">发布时间</th>
-                                            <th class="text-center">更新时间</th>
-                                            <th class="text-center">操作</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        {foreach $data as $v}
-                                        <tr>
-                                            <td align="center">{$v.goods_id}</td>
-                                            <td align="center">{$v.goods_name}</td>
-                                            <td align="center">
-                                                <img src="" alt="" height="40" width="40">
-                                            </td>
-                                            <td align="center">{$v.cate_id}</td>
-                                            <td align="center">{$v.sell_price}</td>
-                                            <td align="center">{$v.market_price}</td>
-                                            <td align="center">{$v.store}</td>
-                                            <td align="center">{$v.freez}</td>
-                                            <td align="center">{$v.maketable}</td>
-                                            <td align="center">{$v.keywords}</td>
-                                            <td align="center">{$v.last_modify_id}</td>
-                                            <td align="center">{$v.create_time|date="y-m-d",###}</td>
-                                            <td align="center">{$v.last_modify|date="y-m-d",###}</td>
-                                            <td align="center">
-                                                <a href="{:url('Image/index')}" class="btn btn-primary btn-sm shiny">
-                                                    <i class="fa fa-edit"></i> 图片管理
-                                                </a>
-                                                <a href="{:url('Goods/edit')}" class="btn btn-primary btn-sm shiny">
-                                                    <i class="fa fa-edit"></i> 编辑
-                                                </a>
-                                                <a href="{:url('Goods/del',array("id"=>$v.goods_id))}"
-                                                   onClick="warning('{'确实要删除吗':'确实要撤销删除吗'}')"
-                                                   class="btn btn-danger btn-sm shiny">
-                                                    <i class="fa fa-trash-o"></i> 删除
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        {/foreach}
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
+
             <!-- /Page Body -->
 
         </div>

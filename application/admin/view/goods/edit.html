@@ -288,7 +288,7 @@
                     <div class="col-lg-12 col-sm-12 col-xs-12">
                         <div class="widget">
                             <div class="widget-header bordered-bottom bordered-blue">
-                                <span class="widget-caption">新增商品</span>
+                                <span class="widget-caption">修改商品</span>
                             </div>
                             <div class="widget-body">
                                 <div id="horizontal-form">
@@ -315,11 +315,11 @@
                                         <div class="form-group">
                                             <label for="cate_id"
                                                    class="col-sm-2 control-label no-padding-right">所属分类</label>
-                                            <div class="col-sm-1">
-                                                <select id="cate_id" name="cate_id" style="width: 260%;">
+                                            <div class="col-sm-6">
+                                                <select id="cate_id" name="cate_id">
                                                     <option value="">--请选择--</option>
                                                    {foreach $cateData as $v}
-                                                    <option value="{$v.cate_id}">{$v.name}</option>
+                                                    <option value="{$v.cate_id}" {if condition="$v.cate_id eq $data.cate_id"}selected="selected"{/if}>{$v.name}</option>
                                                    {/foreach}
                                                 </select>
                                             </div>
@@ -373,7 +373,7 @@
                                             <label for="maketable" class="col-sm-2 control-label no-padding-right">是否上架</label>
                                             <div class="col-xs-4">
                                                 <label>
-                                                    <input class="checkbox-slider slider-icon yesno" name="maketable" type="checkbox">
+                                                    <input class="checkbox-slider slider-icon yesno" name="maketable" type="checkbox" {if condition="$data.maketable eq 1"}checked="checked"{/if}>
                                                     <span class="text"></span>
                                                 </label>
                                             </div>
@@ -382,7 +382,7 @@
                                         <div class="form-group">
                                             <label for="desc" class="col-sm-2 control-label no-padding-right">描述</label>
                                             <div class="col-sm-6">
-                                                <textarea name="desc" id="desc" cols="60" rows="2" class="form-control"></textarea>
+                                                <textarea name="desc" id="desc" cols="60" rows="2" class="form-control">{$data.desc}</textarea>
                                             </div>
                                             <p class="help-block col-sm-4 red">* 必填</p>
                                         </div>
@@ -392,7 +392,7 @@
                                             <label for="content"
                                                    class="col-sm-2 control-label no-padding-right">商品详情</label>
                                             <div class="col-sm-6">
-                                                <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                                                <textarea name="content" id="content" cols="30" rows="10">{$data.content}</textarea>
                                             </div>
                                         </div>
                                         <input type="hidden" id="goods_id" name="goods_id" value="{$data.goods_id}">
