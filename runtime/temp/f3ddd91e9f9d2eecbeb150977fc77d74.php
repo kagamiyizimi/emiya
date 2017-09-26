@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:78:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\manager\list.html";i:1506068285;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:78:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\manager\list.html";i:1506080646;}*/ ?>
 <?php echo widget("Widget/header"); ?>
 
 <!-- /头部 -->

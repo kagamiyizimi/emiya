@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:77:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\manager\add.html";i:1506068285;s:79:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\widget\header.html";i:1506068285;s:77:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\widget\left.html";i:1506070524;}*/ ?>
-<!-- Page Sidebar -->
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\widget\left.html";i:1506132442;}*/ ?>
+
 <div class="page-sidebar" id="sidebar">
     <!-- Page Sidebar Header-->
     <div class="sidebar-header-wrapper">
@@ -54,16 +54,16 @@
             </a>
             <ul class="submenu">
                 <li>
-                    <a href="/admin/document/index.html">
+                    <a href="<?php echo url('Cate/index'); ?>">
                                     <span class="menu-text">
-                                        添加顶级分类                                   </span>
+                                        分类管理                                   </span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/document/index.html">
+                    <a href="<?php echo url('Cate/add'); ?>">
                                     <span class="menu-text">
-                                        添加子分类                                   </span>
+                                        添加顶级分类                                   </span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>
@@ -126,9 +126,6 @@
                 </li>
             </ul>
         </li>
-
-
-
     </ul>
     <!-- /Sidebar Menu -->
 </div>

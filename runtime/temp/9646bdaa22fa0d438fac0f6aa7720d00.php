@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\goods\add.html";i:1506394429;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\goods\edit.html";i:1506327698;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -277,7 +277,7 @@
                     <li>
                         <a href="<?php echo url('Goods/index'); ?>">商品列表</a>
                     </li>
-                    <li class="active">添加商品</li>
+                    <li class="active">修改商品</li>
                 </ul>
             </div>
             <!-- /Page Breadcrumb -->
@@ -294,14 +294,14 @@
                             <div class="widget-body">
                                 <div id="horizontal-form">
                                     <form class="form-horizontal" role="form"
-                                          action="<?php echo url('Goods/add'); ?>"
+                                          action="<?php echo url('Goods/upd'); ?>"
                                           method="post" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <label for="goods_name"
                                                    class="col-sm-2 control-label no-padding-right">商品名</label>
                                             <div class="col-sm-6">
                                                 <input class="form-control" id="goods_name" placeholder=""
-                                                       name="goods_name" type="text">
+                                                       name="goods_name" type="text" value="<?php echo $data['goods_name']; ?>">
                                             </div>
                                             <p class="help-block col-sm-4 red">* 必填</p>
                                         </div>
@@ -331,7 +331,7 @@
                                                    class="col-sm-2 control-label no-padding-right">关键字</label>
                                             <div class="col-sm-6">
                                                 <input class="form-control" id="keywords" placeholder="" name="keywords"
-                                                       type="text">
+                                                       type="text" value="<?php echo $data['keywords']; ?>">
                                             </div>
                                             <p class="help-block col-sm-4 red">* 必填</p>
                                         </div>
@@ -339,7 +339,7 @@
                                             <label for="sell_price" class="col-sm-2 control-label no-padding-right">销售价格</label>
                                             <div class="col-sm-6">
                                                 <input class="form-control" id="sell_price" placeholder=""
-                                                       name="sell_price" type="text">
+                                                       name="sell_price" type="text" value="<?php echo $data['sell_price']; ?>">
                                             </div>
                                             <p class="help-block col-sm-4 red">* 必填</p>
                                         </div>
@@ -347,7 +347,7 @@
                                             <label for="market_price" class="col-sm-2 control-label no-padding-right">市场价格</label>
                                             <div class="col-sm-6">
                                                 <input class="form-control" id="market_price" placeholder=""
-                                                       name="market_price" type="text">
+                                                       name="market_price" type="text" value="<?php echo $data['market_price']; ?>">
                                             </div>
                                             <p class="help-block col-sm-4 red">* 必填</p>
                                         </div>
@@ -356,7 +356,7 @@
                                                    class="col-sm-2 control-label no-padding-right">库存</label>
                                             <div class="col-sm-6">
                                                 <input class="form-control" id="store" placeholder="" name="store"
-                                                       type="text">
+                                                       type="text" value="<?php echo $data['store']; ?>">
                                             </div>
                                             <p class="help-block col-sm-4 red">* 必填</p>
                                         </div>
@@ -365,7 +365,7 @@
                                                    class="col-sm-2 control-label no-padding-right">冻结库存</label>
                                             <div class="col-sm-6">
                                                 <input class="form-control" id="freez" placeholder="" name="freez"
-                                                       type="text">
+                                                       type="text" value="<?php echo $data['freez']; ?>">
                                             </div>
                                             <p class="help-block col-sm-4 red">* 必填</p>
                                         </div>
@@ -385,6 +385,7 @@
                                             <div class="col-sm-6">
                                                 <textarea name="desc" id="desc" cols="60" rows="2" class="form-control"></textarea>
                                             </div>
+                                            <p class="help-block col-sm-4 red">* 必填</p>
                                         </div>
 
 
@@ -395,6 +396,7 @@
                                                 <textarea name="content" id="content" cols="30" rows="10"></textarea>
                                             </div>
                                         </div>
+                                        <input type="hidden" id="goods_id" name="goods_id" value="<?php echo $data['goods_id']; ?>">
                                         <div class="form-group">
                                             <div class="col-sm-offset-2 col-sm-10">
                                                 <button type="submit" class="btn btn-default">保存信息</button>

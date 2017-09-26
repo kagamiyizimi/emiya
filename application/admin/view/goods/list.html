@@ -80,24 +80,24 @@
                                 <td align="center">
                                     <img src="" alt=""height="40"width="40">
                                 </td>
-                                <td align="center">{$v.cate_id}</td>
+                                <td align="center">{$v.name}</td>
                                 <td align="center">{$v.sell_price}</td>
                                 <td align="center">{$v.market_price}</td>
                                 <td align="center">{$v.store}</td>
                                 <td align="center">{$v.freez}</td>
-                                <td align="center">{$v.maketable}</td>
+                                <td align="center">{$v.maketable =="1"?"上架":"下架"}</td>
                                 <td align="center">{$v.keywords}</td>
-                                <td align="center">{$v.last_modify_id}</td>
+                                <td align="center">{$v.username}</td>
                                 <td align="center">{$v.create_time|date="y-m-d",###}</td>
                                 <td align="center">{$v.last_modify|date="y-m-d",###}</td>
                                 <td align="center">
                                     <a href="{:url('Image/index')}" class="btn btn-primary btn-sm shiny">
                                         <i class="fa fa-edit"></i> 图片管理
                                     </a>
-                                    <a href="{:url('Goods/edit')}" class="btn btn-primary btn-sm shiny">
+                                    <a href="{:url(\"Goods/edit\",array('id'=>$v.goods_id))}" class="btn btn-primary btn-sm shiny">
                                         <i class="fa fa-edit"></i> 编辑
                                     </a>
-                                    <a href="#" onClick="warning('{'确实要删除吗':'确实要撤销删除吗'}', '{:url('Goods/delete')}')" class="btn btn-danger btn-sm shiny">
+                                    <a href="#"   onClick="warning('确实要删除吗', '{:url(\"Goods/del\",array('id'=>$v.goods_id))}')" class="btn btn-danger btn-sm shiny">
                                         <i class="fa fa-trash-o"></i> 删除
                                     </a>
                                 </td>
@@ -106,8 +106,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div>
-                	                </div>
+             {$data->render()}
             </div>
         </div>
     </div>

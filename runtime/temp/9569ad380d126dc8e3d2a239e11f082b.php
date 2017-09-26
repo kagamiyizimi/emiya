@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\goods\list.html";i:1506068634;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\goods\list.html";i:1506341120;}*/ ?>
 <!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
@@ -81,24 +81,24 @@
                                 <td align="center">
                                     <img src="" alt=""height="40"width="40">
                                 </td>
-                                <td align="center"><?php echo $v['cate_id']; ?></td>
+                                <td align="center"><?php echo $v['name']; ?></td>
                                 <td align="center"><?php echo $v['sell_price']; ?></td>
                                 <td align="center"><?php echo $v['market_price']; ?></td>
                                 <td align="center"><?php echo $v['store']; ?></td>
                                 <td align="center"><?php echo $v['freez']; ?></td>
-                                <td align="center"><?php echo $v['maketable']; ?></td>
+                                <td align="center"><?php echo $v['maketable']=="1"?"上架":"下架"; ?></td>
                                 <td align="center"><?php echo $v['keywords']; ?></td>
-                                <td align="center"><?php echo $v['last_modify_id']; ?></td>
+                                <td align="center"><?php echo $v['username']; ?></td>
                                 <td align="center"><?php echo date("y-m-d",$v['create_time']); ?></td>
                                 <td align="center"><?php echo date("y-m-d",$v['last_modify']); ?></td>
                                 <td align="center">
                                     <a href="<?php echo url('Image/index'); ?>" class="btn btn-primary btn-sm shiny">
                                         <i class="fa fa-edit"></i> 图片管理
                                     </a>
-                                    <a href="<?php echo url('Goods/edit'); ?>" class="btn btn-primary btn-sm shiny">
+                                    <a href="<?php echo url("Goods/edit",array('id'=>$v['goods_id'])); ?>" class="btn btn-primary btn-sm shiny">
                                         <i class="fa fa-edit"></i> 编辑
                                     </a>
-                                    <a href="#" onClick="warning('{'确实要删除吗':'确实要撤销删除吗'}', '<?php echo url('Goods/delete'); ?>')" class="btn btn-danger btn-sm shiny">
+                                    <a href="#"   onClick="warning('确实要删除吗', '<?php echo url("Goods/del",array('id'=>$v['goods_id'])); ?>')" class="btn btn-danger btn-sm shiny">
                                         <i class="fa fa-trash-o"></i> 删除
                                     </a>
                                 </td>
@@ -107,8 +107,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div>
-                	                </div>
+             <?php echo $data->render(); ?>
             </div>
         </div>
     </div>
