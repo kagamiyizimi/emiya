@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nav_box{
+    min-width: 1100px;
+    height: auto;
+    border: 1px solid silver;
+}
+
+.nav_top{
+    height: 10px;
+    width: 100%;
+    background: #15374a;
+}
+
+.nav_body{
+    width: 80%;
+    height: 45px;
+    margin: 15px auto;
+    background: antiquewhite;
+}
+.nav_body img{
+    margin-left: -100px;
+}
+.clear{
+    clear: both;
+}
+.goods ul li img{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.allgoods{
+     margin-left: 80px;
+     margin-top: -50px;
+    width: 196px;
+     height: 30px;
+     background: deepskyblue;
+     text-align: center;
+     list-style: none;
+ }
+.allgoods a{
+    text-decoration: none;
+}
+.all{
+    /*border: 2px solid blue;*/
+    background: yellow;
+    width: 980px;
+    height: 350px;
+    position: absolute;
+    left:226px;
+    line-height: 30px;
+    margin-top: 5px;
+    display: none;
+}
+.happen{
+    margin-left: 280px;
+    margin-top: -30px;
+    width: 196px;
+    height: 30px;
+    background: deepskyblue;
+    text-align: center;
+    list-style: none;
+}
+.happen a{
+    text-decoration: none;
+}
+.goodnews{
+    /*border: 2px solid blue;*/
+    background: lawngreen;
+    width: 196px;
+    height:170px;
+    left:552px;
+    text-align: center;
+    display: none;
+    margin-top: -1px;
+}
+.goodnews li{
+    list-style: none;
+    line-height: 40px;
+}
+.goodnews ul li a{
+    text-decoration: none;
+    color: black;
+}
+.proposition{
+    margin-left: 480px;
+    margin-top: -30px;
+    width: 196px;
+    height: 30px;
+    background: deepskyblue;
+    text-align: center;
+    list-style: none;
+}
+.proposition a{
+    text-decoration: none;
+}
+.eat{
+    /*border: 2px solid blue;*/
+    background: darkorchid;
+    width: 196px;
+    height:210px;
+    left:902px;
+    text-align: center;
+    display: none;
+}
+.goods ul{
+    float: left;
+}
+.goods li{
+    list-style: none;
+    line-height: 30px;
+}
+.goodsul li a{
+    text-decoration: none;
+    color: black;
+}
+.eat li{
+    list-style: none;
+    line-height: 40px;
+}
+.eat ul li a{
+    text-decoration: none;
+    color: black;
+}
+.search_keywords{
+    margin-left:700px;
+    line-height: 30px;
+    font-size: 13px;
+    float: left;
+    border: 0;
+    height: 30px;
+    background: #32b112;
+    margin-top: -33px;
+    position: relative;
+}
+
+.search{
+    background: url("../images/header/icon_magnifier (1).png") no-repeat;
+    width: 30px;
+    height: 30px;
+    background-color: #AFC5CD;
+    border: 0;
+    background-size: 16px;
+    background-position: center;
+    border-radius: 14px;
+    position: absolute;
+    margin-left:830px;
+    top: 44px;
+}
+.anniversary li{
+    list-style: none;
+}
+.basket {
+    background: url(../images/header/ym_icon_cart.png) no-repeat;
+    height: 30px;
+    width: 80px;
+    margin-top: -30px;
+    background-size: 30px;
+    background-position: center;
+    float: right;
+    position: absolute;
+    margin-left: 900px;
+}
+.user{
+    background: url(../images/header/ym_icon_user.png) no-repeat;
+    height: 30px;
+    width: 80px;
+    margin-top: 19px;
+    margin-left: 20px;
+    background-size: 30px;
+    background-position: center;
+    float: right;
+    position: absolute;
+    margin-left: 1000px;
+    margin-top: -28px;
+}
+.empty{
+    border: 2px solid blue;
+    background: #ffb85c;
+    width: 350px;;
+    height:80px;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: -290PX;
+    display: none;
+}
+.customer{
+    border: 2px solid blue;
+    background: deepskyblue;
+    width: 125px;;
+    height:75px;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: -15px;
+    text-align: center;
+    display: none;
+}
+.customer li{
+    list-style: none;
+    line-height: 30px;
+}
+.customer  li a{
+    text-decoration: none;
+    color: black;
+}
+.slideshow{
+    margin-left: 50px;
+}
+.beef{
+    margin-left: -120px;
+}
+
+.beef li{
+    list-style: none;
+    float: left;
+    margin-left: 130px;
+}
+
+.balance{
+    margin-left: 5px;
+    width: 1300px;
+}
+
+.salad{
+    width: 270px;
+    height: 320px;
+    line-height: 30px;
+    float: left;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.salad li{
+    list-style: none;
+}
+
+.article{
+    font-size: 14px;
+    width: 270px;
+}
+.hotbuy{
+    margin-top: 150px;
+    margin-left: 50px;
+    position: relative;
+}
+.hotbuy li{
+    list-style: none;
+}
+.preference{
+    position: absolute;
+    top: 0px;
+    left: 60px;
+}
+.preference li{
+    text-align: center;
+    line-height:30px;
+}
+.preference li a{
+    text-decoration: none;
+}
+
+.grow{
+    position: absolute;
+    top: 0px;
+    left: 350px;
+}
+.grow li{
+    text-align: center;
+    line-height:30px;
+}
+.grow li a{
+    text-decoration: none;
+}
+.three{
+    position: absolute;
+    top: 0px;
+    left: 580px;
+}
+.three li{
+    text-align: center;
+    line-height:30px;
+}
+.three li a{
+    text-decoration: none;
+}
+.forth{
+    position: absolute;
+    top: 0px;
+    left: 810px;
+}
+.forth li{
+    text-align: center;
+    line-height:30px;
+}
+.forth li a{
+    text-decoration: none;
+}
+.fifth{
+    position: absolute;
+    top: 0px;
+    left: 1030px;
+}
+.fifth li{
+    text-align: center;
+    line-height:30px;
+}
+.fifth li a{
+    text-decoration: none;
+}
+.sisth{
+    position: absolute;
+    top: 350px;
+    left: 350px;
+}
+.sisth li{
+    text-align: center;
+    line-height:30px;
+}
+.sisth li a{
+    text-decoration: none;
+}
+.seventh{
+    position: absolute;
+    top: 350px;
+    left: 600px;
+}
+.seventh li{
+    text-align: center;
+    line-height:30px;
+}
+.seventh li a{
+    text-decoration: none;
+}
+.eighth{
+    position: absolute;
+    top: 350px;
+    left: 830px;
+}
+.eighth li{
+    text-align: center;
+    line-height:30px;
+}
+.eighth li a{
+    text-decoration: none;
+}
+.ninth{
+    position: absolute;
+    top: 350px;
+    left: 1050px;
+}
+.ninth li{
+    text-align: center;
+    line-height:30px;
+}
+.ninth li a{
+    text-decoration: none;
+}
+.more{
+    margin-top: 600px;
+    margin-left: 50px;
+    position: relative;
+}
+.more li{
+    list-style: none;
+}
+.beauty img{
+    margin-left: -60px;
+    margin-top: 20px;
+}
+.safety{
+    margin-top: 1300px;
+    margin-left: 50px;
+    position: relative;
+}
+.safety li{
+    list-style: none;
+}
+.safety img{
+    margin-left: -60px;
+    margin-top: 20px;
+}
+.seasonalvegetable{
+    margin-top: 2100px;
+    margin-left: 50px;
+    position: relative;
+}
+.seasonalvegetable li{
+    list-style: none;
+}
+.seasonalvegetable img{
+    margin-left: -60px;
+    margin-top: 20px;
+}
+.meat{
+    margin-top: 2800px;
+    margin-left: 50px;
+    position: relative;
+}
+.meat li{
+    list-style: none;
+}
+.meat img{
+    margin-left: -60px;
+    margin-top: 20px;
+}
+.oil{
+    margin-top: 3500px;
+    margin-left: 50px;
+    position: relative;
+}
+.oil li{
+    list-style: none;
+}
+.oil img{
+    margin-left: -60px;
+    margin-top: 20px;
+}
+.water{
+    margin-top: 4200px;
+    margin-left: 50px;
+    position: relative;
+}
+.water li{
+    list-style: none;
+}
+.water img{
+    margin-left: -60px;
+    margin-top: 20px;
+}
+.snacks{
+    margin-top: 4900px;
+    margin-left: 50px;
+    position: relative;
+}
+.snacks li{
+    list-style: none;
+}
+.snacks img{
+    margin-left: -60px;
+    margin-top: 20px;
+}
+.noodle{
+    margin-top: 5600px;
+    margin-left: 50px;
+    position: relative;
+}
+.noodle li{
+    list-style: none;
+}
+.noodle img{
+    margin-left: -60px;
+    margin-top: 20px;
+}
+.dairyproducts{
+    margin-top: 6300px;
+    margin-left: 50px;
+    position: relative;
+}
+.dairyproducts li{
+    list-style: none;
+}
+.dairyproducts img{
+    margin-left: -60px;
+    margin-top: 20px;
+}

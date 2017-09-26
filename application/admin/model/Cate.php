@@ -96,5 +96,38 @@ class Cate extends Model{
 //        dump($res);exit;
         return $res!==false?true:false;
     }
+    //删除分类名
+    static public function delCate($id){
+        $response=[
+            'status'=>'error',
+            'msg'>''
+        ];
+        if(!$id){
+            $response['msg']='参数错误';
+            return $response;
+        }
+        //判断有没有子分类  有子分类就不能删
+        $data=db('cate')->where(['pid'=>$id])->find();
+        if(!empty($data)){
+            $response['msg']='该分类下有子分类，不能删除!';
+            return $response;
+        }
+
+        //删除分类
+        $res=db('cate')->delete($id);
+        if($res){
+            $response['status']= 'success';
+            $response['msg']='删除成功';
+        }else{
+            $response['msg']='删除失败';
+        }
+
+        return $response;
+    }
+    //左侧添加子分类
+    static public function addSecc(){
+
+    }
+
 }
 ?>

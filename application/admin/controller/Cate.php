@@ -4,7 +4,7 @@ namespace app\admin\controller;
 use think\Controller;
 use app\admin\model\Cate as CateModel;
 
-class Cate extends Controller
+class Cate extends Base
 {
     public function index()
     {
@@ -62,6 +62,7 @@ class Cate extends Controller
         $this->assign('data',$data);
         return $this->fetch();
     }
+    //修改子分类
     public function edit()
     {
         $id=input('id');
@@ -86,6 +87,16 @@ class Cate extends Controller
         $data=CateModel::getCateByid($id);
         $this->assign('data',$data);
         return $this->fetch('cate/edit');
+    }
+    //删除子分类
+    public function del(){
+        $id=input('id');
+        $res=CateModel::delCate($id);
+        if($res['status']=='success'){
+            return $this->success($res['msg'],url('Cate/index'));
+        }else{
+            return $this->error($res['msg']);
+        }
     }
 
 }
