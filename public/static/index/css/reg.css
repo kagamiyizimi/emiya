@@ -1,0 +1,82 @@
+.contain{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+.reg_con{
+    height: 550px;
+    /*width: 85%;*/
+    margin: auto;
+    /*background-color: #5bc0de;*/
+}
+.back_img{
+    background: url("../images/7d9916a7889886844758796f150364f8.jpg") no-repeat;
+    background-size: 750px auto;
+    height: 500px;
+}
+.reg_form>label{
+    width: 100%;
+    font-size: 13px;
+    line-height: 30px;
+    margin: 8px 0;
+}
+.reg_form>label>.reg_inp{
+    float: right;
+}
+.reg_form>.reg_lable>span{
+    float: left;
+    margin-right: 20px;
+}
+.reg_btn{
+    background-color: rgba(0,42,72,1);
+    color: white;
+    font-weight: 500;
+}
+.reg_btn:hover{
+    color: white;
+    background-color: rgba(0,42,72,.5);
+}
+label>.reg_inp>.woring{
+    overflow: hidden;
+}
+label>.reg_inp>.reg_level{
+    width: 50px;
+    height: 8px;
+    float: left;
+    /*background-color: #2b542c;*/
+    margin-top: 15px;
+    margin-left: 5px;
+    display: none;
+}
+label>.reg_inp>.reg_level1{
+    background-color: #fff3bf;
+}
+label>.reg_inp>.reg_level2{
+    background-color: #fd974b;
+}
+label>.reg_inp>.reg_level3{
+    background-color: #f11c07;
+}
+.woring{
+    display: none;
+}
+.woring>i{
+    text-align: center;
+    width: 15px;
+    line-height: 15px;
+    height: 15px;
+    background-color: #d51818;
+    border: none;
+    display: block;
+    font-size: 10px;
+    color: white;
+    border-radius: 10px;
+    float: left;
+}
+.woring>span{
+    display: block;
+    font-size: 10px;
+    line-height: 15px;
+    color: #bab8ba;
+    float: left;
+}

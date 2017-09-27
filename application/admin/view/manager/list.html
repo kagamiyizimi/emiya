@@ -54,11 +54,11 @@
                                             <!--<td align="center">{$v.ip}</td>-->
                                             <td align="center">{$v.login_time|date="y-m-d",###}</td>
                                             <td align="center">
-                                                <a href="{:url(\" Manager/edit\",array("id"=>$v.manager_id))}"
+                                                <a href="{:url(\"   Manager/edit\",array("id"=>$v.manager_id))}"
                                                 class="btn btn-primary btn-sm shiny" >
                                                 <i class="fa fa-edit"></i> 编辑
                                                 </a>
-                                                <a href="#" onClick="warning('确实要删除吗', '{:url(\" Manager/del\",array("id"=>$v.manager_id))}')"
+                                                <a href="#" onClick="warning('确实要删除吗', '{:url(\"Manager/del\",array("id"=>$v.manager_id))}')"
                                                 class="btn btn-danger btn-sm shiny">
                                                 <i class="fa fa-trash-o"></i> 删除
                                                 </a>

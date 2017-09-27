@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"D:\php_project\test2\emiya\public/../application/admin\view\member\index.html";i:1506323123;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"D:\php_project\test2\emiya\public/../application/admin\view\member\index.html";i:1506496296;}*/ ?>
 <?php echo widget("Widget/header"); ?>
 
 <!-- /头部 -->
@@ -24,9 +24,6 @@
             <!-- Page Body -->
             <div class="page-body">
 
-                <button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon"
-                        onClick="javascript:window.location.href = '<?php echo url("Member/memberAdd"); ?>'"> <i class="fa fa-plus"></i> Add
-                </button>
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 col-xs-12">
                         <div class="widget">
@@ -37,14 +34,14 @@
                                         <tr>
                                             <th class="text-center">ID</th>
                                             <th class="text-center">用户名称</th>
-                                            <th class="text-center">密码</th>
                                             <th class="text-center">电话</th>
                                             <th class="text-center">邮箱</th>
                                             <th class="text-center">注册时间</th>
                                             <th class="text-center">登录次数</th>
-                                            <th class="text-center">登录时间</th>
+                                            <!--<th class="text-center">登录时间</th>-->
                                             <th class="text-center">照片</th>
                                             <th class="text-center">是否冻结</th>
+                                            <th class="text-center">登录时间</th>
                                             <th class="text-center">操作</th>
                                         </tr>
                                         </thead>
@@ -54,23 +51,21 @@
                                         <tr>
                                             <td align="center"><?php echo $v['member_id']; ?></td>
                                             <td align="center"><?php echo $v['username']; ?></td>
-                                            <td align="center"><?php echo $v['password']; ?></td>
                                             <td align="center"><?php echo $v['mobile']; ?></td>
                                             <td align="center"><?php echo $v['email']; ?></td>
                                             <td align="center"><?php echo $v['reg_time']; ?></td>
-                                            <td align="center"><?php echo $v['ip']; ?></td>
                                             <td align="center"><?php echo $v['login_count']; ?></td>
-                                            <td align="center"><?php echo $v['login_time']; ?></td>
+                                            <!--<td align="center"><?php echo $v['login_time']; ?></td>-->
                                             <td align="center"><?php echo $v['pic']; ?></td>
                                             <td align="center"><?php echo $v['lock']=="1"?"是":"否"; ?></td>
                                             <!--<td align="center"><?php echo $v['ip']; ?></td>-->
                                             <td align="center"><?php echo date("y-m-d",$v['login_time']); ?></td>
                                             <td align="center">
-                                                <a href="<?php echo url("Manager/edit",array("id"=>$v['manager_id'])); ?>"
+                                                <a href="<?php echo url("Member/edit",array("id"=>$v['member_id'])); ?>"
                                                 class="btn btn-primary btn-sm shiny" >
                                                 <i class="fa fa-edit"></i> 编辑
                                                 </a>
-                                                <a href="#" onClick="warning('确实要删除吗', '<?php echo url("Manager/del",array("id"=>$v['manager_id'])); ?>')"
+                                                <a href="#" onClick="warning('确实要删除吗', '<?php echo url("Member/del",array("id"=>$v['member_id'])); ?>')"
                                                 class="btn btn-danger btn-sm shiny">
                                                 <i class="fa fa-trash-o"></i> 删除
                                                 </a>

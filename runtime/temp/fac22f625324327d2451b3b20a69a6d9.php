@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:76:"D:\php_project\test2\emiya\public/../application/admin\view\index\index.html";i:1506133255;s:78:"D:\php_project\test2\emiya\public/../application/admin\view\widget\header.html";i:1506329322;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:78:"D:\php_project\test2\emiya\public/../application/admin\view\widget\header.html";i:1506329322;}*/ ?>
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8">

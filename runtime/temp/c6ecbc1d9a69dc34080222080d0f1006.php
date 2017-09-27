@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"D:\php_project\test2\emiya\public/../application/admin\view\manager\list.html";i:1506323123;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"D:\php_project\test2\emiya\public/../application/admin\view\manager\list.html";i:1506398182;}*/ ?>
 <?php echo widget("Widget/header"); ?>
 
 <!-- /头部 -->
@@ -55,11 +55,11 @@
                                             <!--<td align="center"><?php echo $v['ip']; ?></td>-->
                                             <td align="center"><?php echo date("y-m-d",$v['login_time']); ?></td>
                                             <td align="center">
-                                                <a href="<?php echo url(" Manager/edit",array("id"=>$v['manager_id'])); ?>"
+                                                <a href="<?php echo url("   Manager/edit",array("id"=>$v['manager_id'])); ?>"
                                                 class="btn btn-primary btn-sm shiny" >
                                                 <i class="fa fa-edit"></i> 编辑
                                                 </a>
-                                                <a href="#" onClick="warning('确实要删除吗', '<?php echo url(" Manager/del",array("id"=>$v['manager_id'])); ?>')"
+                                                <a href="#" onClick="warning('确实要删除吗', '<?php echo url("Manager/del",array("id"=>$v['manager_id'])); ?>')"
                                                 class="btn btn-danger btn-sm shiny">
                                                 <i class="fa fa-trash-o"></i> 删除
                                                 </a>

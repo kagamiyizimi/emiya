@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\php_project\test2\emiya\public/../application/admin\view\widget\left.html";i:1506323123;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\php_project\test2\emiya\public/../application/admin\view\widget\left.html";i:1506339236;}*/ ?>
 <div class="page-sidebar" id="sidebar">
     <!-- Page Sidebar Header-->
     <div class="sidebar-header-wrapper">
@@ -61,12 +61,6 @@
                 <li>
                     <a href="<?php echo url('Cate/add'); ?>">
                                     <span class="menu-text">添加顶级分类</span>
-                        <i class="menu-expand"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo url('Cate/addChild'); ?>">
-                                    <span class="menu-text">添加子分类</span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>

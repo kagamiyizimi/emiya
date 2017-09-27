@@ -48,9 +48,5 @@ class Login extends Controller{
         //登录成功,信息存入session
         session("admin",$info);
         return $this->success("登录成功",url("Index/index"));
-
     }
-
-
-
 }

@@ -1,9 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\php_project\test2\emiya\public/../application/index\view\reg\reg.html";i:1506479781;}*/ ?>
-<?php echo widget('Widget/header'); ?>;
+{:widget('Widget/header')};
 
 <div class="contain">
     <div class="reg_con container">
-        <form action="<?php echo url('Reg/add'); ?>" class="reg_form col-lg-4" method="post">
+        <form action="{:url('Reg/add')}" class="reg_form col-lg-4" method="post">
             <h3>会员注册</h3>
             <label for="username">手机号
                 <div class="reg_inp col-lg-10">
@@ -36,7 +35,7 @@
             <label for="code" class="reg_lable"><span>校检码</span>
                 <div class="reg_inp1 col-lg-4">
                     <input class="reg_chan form-control" required="" placeholder="校检码" id="code" name="code">
-                    <div><img src="<?php echo captcha_src(); ?>" alt="captcha" onclick="this.src='<?php echo captcha_src(); ?>'"/></div>
+                    <div><img src="{:captcha_src()}" alt="captcha" onclick="this.src='{:captcha_src()}'"/></div>
                     <div class="woring">
                         <i>!</i><span>校检码不正确</span>
                     </div>
@@ -69,4 +68,4 @@
 <div style="clear: both"></div>
 <script src="__STATIC__/index/js/reg.js"></script>
 
-<?php echo widget('Widget/footer'); ?>
+{:widget('Widget/footer')}
