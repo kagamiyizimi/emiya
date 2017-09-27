@@ -1,10 +1,11 @@
-{:widget("Widget/header")}
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"E:\yimishiji\emiya\public/../application/admin\view\manager\edit.html";i:1506494054;}*/ ?>
+<?php echo widget("Widget/header"); ?>
 <!-- /头部 -->
 
 <div class="main-container container-fluid">
     <div class="page-container">
         <!-- Page Sidebar -->
-        {:widget("Widget/left")}
+        <?php echo widget("Widget/left"); ?>
         <!-- /Page Sidebar -->
         <!-- Page Content -->
         <div class="page-content">
@@ -15,7 +16,7 @@
                         <a href="#">系统</a>
                     </li>
                     <li>
-                        <a href="{:url('Manager/lis')}">用户管理</a>
+                        <a href="<?php echo url('Manager/lis'); ?>">用户管理</a>
                     </li>
                     <li class="active">添加用户</li>
                 </ul>
@@ -33,11 +34,11 @@
                             </div>
                             <div class="widget-body">
                                 <div id="horizontal-form">
-                                    <form class="form-horizontal" role="form" action="{:url('Manager/saveEdit')}" method="post">
+                                    <form class="form-horizontal" role="form" action="<?php echo url('Manager/saveEdit'); ?>" method="post">
                                         <div class="form-group">
                                             <label for="username" class="col-sm-2 control-label no-padding-right">用户名</label>
                                             <div class="col-sm-6">
-                                                <input class="form-control" id="username" placeholder="" name="username" required="" type="text" value="{$data.username}">
+                                                <input class="form-control" id="username" placeholder="" name="username" required="" type="text" value="<?php echo $data['username']; ?>">
                                             </div>
                                             <p class="help-block col-sm-4 red">* 必填</p>
                                         </div>
@@ -50,13 +51,13 @@
 
                                         </div>
                                         <!--隐藏域-->
-                                        <input type="hidden" name="manager_id" value="{$data.manager_id}">
+                                        <input type="hidden" name="manager_id" value="<?php echo $data['manager_id']; ?>">
 
                                         <div class="form-group">
                                             <label for="lock" class="col-sm-2 control-label no-padding-right">冻结管理员</label>
                                             <div class="col-xs-4">
                                                 <label>
-                                                    <input class="checkbox-slider slider-icon yesno" name="lock" type="checkbox" value="{$data.lock}" {if condition="$data.lock eq 1"}checked="checked"{/if}>
+                                                    <input class="checkbox-slider slider-icon yesno" name="lock" type="checkbox" value="<?php echo $data['lock']; ?>" <?php if($data['lock'] == 1): ?>checked="checked"<?php endif; ?>>
                                                     <span class="text"></span>
                                                 </label>
                                             </div>

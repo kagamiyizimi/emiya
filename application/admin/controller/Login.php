@@ -39,7 +39,7 @@ class Login extends Controller{
           return $this->error("验证码错误",url("Login/index"));
        }
        //验证用户
-       $info=db("manager")->where(array("username"=>$data["username"]))->find();
+       $info=db("manager")->where(array("username"=>$data["username"],"lock"=>0))->find();
       //echo db("manager")->getLastSql();exit;
        //dump($info);exit;
 
