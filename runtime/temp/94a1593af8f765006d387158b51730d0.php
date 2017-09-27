@@ -1,4 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"E:\yimishiji\emiya\public/../application/admin\view\widget\left.html";i:1506337276;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"E:\yimishiji\emiya\public/../application/admin\view\widget\left.html";i:1506476668;}*/ ?>
+
 <div class="page-sidebar" id="sidebar">
     <!-- Page Sidebar Header-->
     <div class="sidebar-header-wrapper">
@@ -54,12 +55,15 @@
             <ul class="submenu">
                 <li>
                     <a href="<?php echo url('Cate/index'); ?>">
+
                                     <span class="menu-text">分类列表</span>
+
                         <i class="menu-expand"></i>
                     </a>
                 </li>
                 <li>
                     <a href="<?php echo url('Cate/add'); ?>">
+<
                                     <span class="menu-text">添加顶级分类</span>
                         <i class="menu-expand"></i>
                     </a>
@@ -67,6 +71,7 @@
                 <li>
                     <a href="<?php echo url('Cate/addChild'); ?>">
                                     <span class="menu-text">添加子分类</span>
+
                         <i class="menu-expand"></i>
                     </a>
                 </li>

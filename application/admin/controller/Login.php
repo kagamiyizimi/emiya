@@ -40,7 +40,7 @@ class Login extends Controller{
        }
        //验证用户
        $info=db("manager")->where(array("username"=>$data["username"]))->find();
-      echo db("manager")->getLastSql();exit;
+      //echo db("manager")->getLastSql();exit;
        //dump($info);exit;
 
       if(!isset($info)||empty($info)){
@@ -52,7 +52,9 @@ class Login extends Controller{
       }
        //登录成功,信息存入session
        session("admin",$info);
-    return $this->success("登录成功",url("Index/index"));
+       //echo $_SESSION["username"];exit();
+          return $this->success("登录成功",url("Index/index"));
+
 
   }
 
