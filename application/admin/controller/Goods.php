@@ -35,10 +35,22 @@ class Goods extends Base
 
 
             $res = Db::name('goods')->insert($data);
+            if ($res){
+                return $this->success('添加成功',url('Goods/index'));
+            }else{
+                return $this->success('添加失败');
+            }
         }
-
-
         return $this->fetch();
-
     }
+    public function del(){
+        $id=input("id");
+        $res=Db::name("goods")->delete($id);
+        if($res){
+            return $this->success("删除成功",url("Goods/index"));
+        }else{
+            return $this->error("删除失败");
+        }
+    }
+
 }

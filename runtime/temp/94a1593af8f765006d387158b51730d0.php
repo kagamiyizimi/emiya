@@ -1,6 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"E:\yimishiji\emiya\public/../application/admin\view\widget\left.html";i:1506079328;}*/ ?>
-
-<!-- Page Sidebar -->
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"E:\yimishiji\emiya\public/../application/admin\view\widget\left.html";i:1506337276;}*/ ?>
 <div class="page-sidebar" id="sidebar">
     <!-- Page Sidebar Header-->
     <div class="sidebar-header-wrapper">
@@ -49,22 +47,26 @@
         <!--商品-->
         <li>
             <a href="#" class="menu-dropdown">
-                <i class="menu-icon fa fa-file-text"></i>
+                <i class="menu-icon fa fa-list"></i>
                 <span class="menu-text">分类</span>
                 <i class="menu-expand"></i>
             </a>
             <ul class="submenu">
                 <li>
-                    <a href="/admin/document/index.html">
-                                    <span class="menu-text">
-                                        添加顶级分类                                   </span>
+                    <a href="<?php echo url('Cate/index'); ?>">
+                                    <span class="menu-text">分类列表</span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/document/index.html">
-                                    <span class="menu-text">
-                                        添加子分类                                   </span>
+                    <a href="<?php echo url('Cate/add'); ?>">
+                                    <span class="menu-text">添加顶级分类</span>
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo url('Cate/addChild'); ?>">
+                                    <span class="menu-text">添加子分类</span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>

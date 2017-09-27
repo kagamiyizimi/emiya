@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"E:\yimishiji\emiya\public/../application/admin\view\goods\list.html";i:1506076073;s:70:"E:\yimishiji\emiya\public/../application/admin\view\widget\header.html";i:1506336242;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"E:\yimishiji\emiya\public/../application/admin\view\widget\header.html";i:1506336242;}*/ ?>
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8">

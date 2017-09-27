@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"E:\yimishiji\emiya\public/../application/admin\view\manager\list.html";i:1506077833;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"E:\yimishiji\emiya\public/../application/admin\view\manager\list.html";i:1506398034;}*/ ?>
 <?php echo widget("Widget/header"); ?>
 
 <!-- /头部 -->
@@ -25,7 +25,7 @@
             <div class="page-body">
 
                 <button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon"
-                        onClick="javascript:window.location.href = '<?php echo url("Manager/add"); ?>'"> <i class="fa fa-plus"></i> Add
+                        onClick="javascript:window.location.href = '<?php echo url('Manager/add'); ?>'"> <i class="fa fa-plus"></i> Add
                 </button>
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 col-xs-12">
@@ -56,12 +56,12 @@
                                             <td align="center"><?php echo date("y-m-d",$v['login_time']); ?></td>
                                             <td align="center">
                                                 <a href="<?php echo url("Manager/edit",array("id"=>$v['manager_id'])); ?>"
-                                                   class="btn btn-primary btn-sm shiny" >
-                                                    <i class="fa fa-edit"></i> 编辑
+                                                class="btn btn-primary btn-sm shiny" >
+                                                <i class="fa fa-edit"></i> 编辑
                                                 </a>
                                                 <a href="#" onClick="warning('确实要删除吗', '<?php echo url("Manager/del",array("id"=>$v['manager_id'])); ?>')"
-                                                   class="btn btn-danger btn-sm shiny">
-                                                    <i class="fa fa-trash-o"></i> 删除
+                                                class="btn btn-danger btn-sm shiny">
+                                                <i class="fa fa-trash-o"></i> 删除
                                                 </a>
                                             </td>
                                         </tr>
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-<?php echo $data->render(); ?>
+                <?php echo $data->render(); ?>
             </div>
             <!-- /Page Body -->
         </div>

@@ -1,7 +1,6 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"E:\yimishiji\emiya\public/../application/admin\view\index\index.html";i:1506076073;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"E:\yimishiji\emiya\public/../application/admin\view\index\index.html";i:1506337276;}*/ ?>
 <?php echo widget("Widget/header"); ?>
-	<!-- /头部 -->
-	
+<!-- /头部 -->
 	<div class="main-container container-fluid">
 		<div class="page-container">
             <?php echo widget("Widget/left"); ?>

@@ -35,13 +35,16 @@ ul>li{
     float: left;
     width: 25%;
 }
-.container>.list>ul>li>.detail{
+.list>ul>li>.detail{
     width: 980px;
     height: 350px;
     border: #8e8d90 solid 1px;
-    display: flex;
+    /*display: flex;*/
     flex-direction: row;
-    /*display: none;*/
+    display: none;
+}
+.container>.list>ul>li>.some_li{
+    background-color: white;
 }
 .container>.list>ul>li>.detail>.cate_div{
     width: 80px;
@@ -127,6 +130,7 @@ ul>li{
     top: 5px;
     left: -300px;
     display: none;
+    background-color: white;
 }
 
 .container>.login>.cartsec>.cartdetail{
@@ -136,8 +140,8 @@ ul>li{
     border: #d0cfd2 solid 1px;
     border-radius: 3px;
     display: none;
+    background-color: white;
 }
-
 .container>.login>.cartsec>.cartdetail>div{
     line-height: 35px;
     border-bottom: #d0cfd2 solid 1px;

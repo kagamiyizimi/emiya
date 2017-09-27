@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"E:\yimishiji\emiya\public/../application/admin\view\Login\login.html";i:1506311822;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"E:\yimishiji\emiya\public/../application/admin\view\Login\login.html";i:1506475733;}*/ ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><!--Head--><head>
     <meta charset="utf-8">
@@ -20,7 +20,7 @@
 
 <body>
     <div class="login-container animated fadeInDown">
-        <form action="<?php echo url('Login/goLogin'); ?>" method="post">
+        <form action="<?php echo url('Login/index'); ?>" method="post">
             <div class="loginbox bg-white">
                 <div class="loginbox-title">SIGN IN</div>
                 <div class="loginbox-textbox">
