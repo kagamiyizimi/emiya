@@ -23,12 +23,14 @@
     width: 100%;
     height: 545px;
    /*background: pink;*/
-    padding-left: 75px;
+    /*padding-left: 75px;*/
 }
 .login-left{
     float: left;
-    width: 370px;
+    width: 300px;
     height: 400px;
+    margin-left: -20px;
+    margin-right: 40px;
     /*background: yellow;*/
 }
 login-left>.title{
@@ -84,7 +86,7 @@ input{
     font-weight: bold;
 }
 .btn{
-    width: 362px;
+    width: 300px;
     height: 38px;
     border: none;
     margin-top: 30px;
@@ -103,7 +105,7 @@ a:hover{
     width: 790px;
     height: 520px;
     float: left;
-    margin-left: 50px;
+    /*margin-left: 10px;*/
 }
 .login-right>span{
     font-size: 14px;
