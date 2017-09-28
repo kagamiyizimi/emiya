@@ -1,4 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\widget\left.html";i:1506578016;}*/ ?>
+<<<<<<< HEAD:runtime/temp/b71670aef29dcf39cf1d29e6f5289541.php
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\widget\left.html";i:1506483052;}*/ ?>
+=======
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\php_project\test2\emiya\public/../application/admin\view\widget\left.html";i:1506513134;}*/ ?>
+>>>>>>> 0ff0850692f9e537372d4515c60b804bb944b63a:runtime/temp/0531e0e310c58ec109078ec58aae6349.php
 
 <div class="page-sidebar" id="sidebar">
     <!-- Page Sidebar Header-->
@@ -21,7 +25,8 @@
             <ul class="submenu">
                 <li>
                     <a href="<?php echo url('Manager/lis'); ?>">
-                                    <span class="menu-text">管理列表</span>
+                                    <span class="menu-text">
+                                        管理列表                                    </span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>
@@ -37,7 +42,8 @@
             <ul class="submenu">
                 <li>
                     <a href="<?php echo url('Member/index'); ?>">
-                                    <span class="menu-text">会员列表</span>
+                                    <span class="menu-text">
+                                        会员列表                                    </span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>
@@ -53,13 +59,16 @@
             <ul class="submenu">
                 <li>
                     <a href="<?php echo url('Cate/index'); ?>">
+
                                     <span class="menu-text">分类列表</span>
+
                         <i class="menu-expand"></i>
                     </a>
                 </li>
                 <li>
                     <a href="<?php echo url('Cate/add'); ?>">
-                        <span class="menu-text">添加顶级分类</span>
+<
+                                    <span class="menu-text">添加顶级分类</span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>
@@ -75,7 +84,8 @@
             <ul class="submenu">
                 <li>
                     <a href="<?php echo url('Goods/index'); ?>">
-                        <span class="menu-text">商品列表</span>
+                                    <span class="menu-text">
+                                        商品列表                                    </span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>
@@ -98,7 +108,8 @@
             <ul class="submenu">
                 <li>
                     <a href="/admin/document/index.html">
-                        <span class="menu-text">订单详情                                   </span>
+                                    <span class="menu-text">
+                                        订单详情                                   </span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>

@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:78:"D:\php_project\test2\emiya\public/../application/index\view\widget\header.html";i:1506513042;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,9 +35,9 @@
 
                             <a href="#" class="boss_ca">四时蔬菜</a>
                             <ul>
-                                {foreach $catePid_1 as $v_1}
-                                <li><a href="#">{$v_1.name}</a></li>
-                                {/foreach}
+                                <?php foreach($catePid_1 as $v_1): ?>
+                                <li><a href="#"><?php echo $v_1['name']; ?></a></li>
+                                <?php endforeach; ?>
                             </ul>
 
                         </div>
@@ -45,9 +46,9 @@
 
                             <a href="#" class="boss_ca">安全水果</a>
                             <ul>
-                                {foreach $catePid_2 as $v_2}
-                                <li><a href="#">{$v_2.name}</a></li>
-                                {/foreach}
+                                <?php foreach($catePid_2 as $v_2): ?>
+                                <li><a href="#"><?php echo $v_2['name']; ?></a></li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
                         <div class="cate_div">
@@ -55,9 +56,9 @@
 
                             <a href="#" class="boss_ca">肉禽蛋类</a>
                             <ul>
-                                {foreach $catePid_3 as $v_3}
-                                <li><a href="#">{$v_3.name}</a></li>
-                                {/foreach}
+                                <?php foreach($catePid_3 as $v_3): ?>
+                                <li><a href="#"><?php echo $v_3['name']; ?></a></li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
 
@@ -66,9 +67,9 @@
 
                             <a href="#" class="boss_ca">乳类制品</a>
                             <ul>
-                                {foreach $catePid_4 as $v_4}
-                                <li><a href="#">{$v_4.name}</a></li>
-                                {/foreach}
+                                <?php foreach($catePid_4 as $v_4): ?>
+                                <li><a href="#"><?php echo $v_4['name']; ?></a></li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
 
@@ -77,9 +78,9 @@
 
                             <a href="#" class="boss_ca">水中鲜物</a>
                             <ul>
-                                {foreach $catePid_5 as $v_5}
-                                <li><a href="#">{$v_5.name}</a></li>
-                                {/foreach}
+                                <?php foreach($catePid_5 as $v_5): ?>
+                                <li><a href="#"><?php echo $v_5['name']; ?></a></li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
 
@@ -88,9 +89,9 @@
 
                             <a href="#" class="boss_ca">早餐&面点</a>
                             <ul>
-                                {foreach $catePid_6 as $v_6}
-                                <li><a href="#">{$v_6.name}</a></li>
-                                {/foreach}
+                                <?php foreach($catePid_6 as $v_6): ?>
+                                <li><a href="#"><?php echo $v_6['name']; ?></a></li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
 
@@ -99,9 +100,9 @@
 
                             <a href="#" class="boss_ca">吃吃零嘴</a>
                             <ul>
-                                {foreach $catePid_7 as $v_7}
-                                <li><a href="#">{$v_7.name}</a></li>
-                                {/foreach}
+                                <?php foreach($catePid_7 as $v_7): ?>
+                                <li><a href="#"><?php echo $v_7['name']; ?></a></li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
 
@@ -110,9 +111,9 @@
 
                             <a href="#" class="boss_ca">饮料酒水</a>
                             <ul>
-                                {foreach $catePid_8 as $v_8}
-                                <li><a href="#">{$v_8.name}</a></li>
-                                {/foreach}
+                                <?php foreach($catePid_8 as $v_8): ?>
+                                <li><a href="#"><?php echo $v_8['name']; ?></a></li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
 
@@ -121,9 +122,9 @@
 
                             <a href="#" class="boss_ca">粮油酱醋</a>
                             <ul>
-                                {foreach $catePid_9 as $v_9}
-                                <li><a href="#">{$v_9.name}</a></li>
-                                {/foreach}
+                                <?php foreach($catePid_9 as $v_9): ?>
+                                <li><a href="#"><?php echo $v_9['name']; ?></a></li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
 
@@ -132,9 +133,9 @@
 
                             <a href="#" class="boss_ca">环保生活</a>
                             <ul>
-                                {foreach $catePid_10 as $v_10}
-                                <li><a href="#">{$v_10.name}</a></li>
-                                {/foreach}
+                                <?php foreach($catePid_10 as $v_10): ?>
+                                <li><a href="#"><?php echo $v_10['name']; ?></a></li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
 
@@ -185,8 +186,8 @@
             <div class="cart cartsec">
                 <img src="__STATIC__/index/images/header/ym_icon_user.png" width="25" height="auto">
                 <div class="cartdetail">
-                    <div><a href="{:url('Login/index')}">登录</a></div>
-                    <div><a href="{:url('Reg/index')}">注册</a></div>
+                    <div><a href="<?php echo url('Login/index'); ?>">登录</a></div>
+                    <div><a href="<?php echo url('Reg/index'); ?>">注册</a></div>
                 </div>
             </div>
         </div>

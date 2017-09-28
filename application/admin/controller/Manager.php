@@ -1,11 +1,12 @@
 <?php
 
 namespace app\admin\controller;
+use think\Controller;
 use think\Db;
 
 use app\admin\controller\Base;
 
-class Manager extends Base{
+class Manager extends Base {
     //管理员列表
     public function lis(){
         $data=Db::name("manager")->paginate(10);
@@ -31,7 +32,7 @@ class Manager extends Base{
             $data["password"]=md5($data["password"]);
 
             $validate = \think\Loader::validate('Manager');
-            if(!$validate->check($data)){
+            if(!$validate->scene("add")->check($data)){
                 return $this->error($validate->getError());
             }
             //验正管理员是否唯一且不为空
@@ -60,8 +61,6 @@ class Manager extends Base{
 
     //修改管理员信息
     public function edit(){
-
-
         $id = input("id");
 //        dump($id);exit;
         $data = Db::name("manager")->find($id);
@@ -80,33 +79,34 @@ class Manager extends Base{
         ];
         //判断是否冻结
         if (input("lock") == "0") {
+            //冻结
             $data["lock"] = "1";
         } else {
+            //不冻结
             $data["lock"] = "0";
         }
 
         //dump($data);exit;
-//        $password=input("password");
-//        if($password !==""){
-//            $data["password"]=md5($password);
-//
-//        }
+
+
         $validate = \think\Loader::validate('Manager');
-        if(!$validate->scene('edit')->check($data)){
+
+        if(!$validate->scene("edit")->check($data)){
             return $this->error($validate->getError());
         }
-        //保存修改数据
 
+        //保存修改数据
+        $password=input("password");
+        if($password !==""){
+            $data["password"]=md5($password);
+        }
         $res=Db::name("manager")->update($data);
 
         if($res !== false){
             return $this->success("修改成功",url("Manager/lis"));
         }else{
-
             return $this->error("修改失败");
         }
-
-
     }
 
     //删除管理员

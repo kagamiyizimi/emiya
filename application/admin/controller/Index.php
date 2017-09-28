@@ -12,12 +12,13 @@ use think\Controller;
 
 class Index extends Controller{
     public function index(){
+
         return $this->fetch();
     }
-
     //退出登录
     public function outLogin(){
         session("admin",null);
         return $this->redirect("Login/index");
     }
+
 }

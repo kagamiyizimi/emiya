@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:78:"D:\php_project\test2\emiya\public/../application/index\view\widget\footer.html";i:1506513041;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

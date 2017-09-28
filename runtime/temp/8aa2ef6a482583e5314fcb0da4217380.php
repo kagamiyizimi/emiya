@@ -1,12 +1,13 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\php_project\test2\emiya\public/../application/index\view\login\login.html";i:1506513041;}*/ ?>
 
-{:widget('Widget/header')}
+<?php echo widget('Widget/header'); ?>
 <div class="login">
     <div class="container">
         <div class="login-left">
             <div class="title">
                 <h2>登录</h2>
             </div>
-            <form action="{:url('Login/doLogin')}" class="form" method="post">
+            <form action="<?php echo url('Login/doLogin'); ?>" class="form" method="post">
                 <span>登录账号</span>
                 <div class="form-control input_box">
                     <input type="text" required="" style="width: 300px" placeholder="用户名/邮箱地址/手机号" name="username">
@@ -31,4 +32,4 @@
     <!--左侧登录框-->
 
 </div>
-{:widget('Widget/footer')}
+<?php echo widget('Widget/footer'); ?>

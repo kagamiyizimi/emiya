@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:78:"D:\php_project\test2\emiya\public/../application/admin\view\widget\header.html";i:1506513041;}*/ ?>
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8">
@@ -55,12 +56,12 @@
                             <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
                                 <li class="username"><a>David Stevenson</a></li>
                                 <li class="dropdown-footer">
-                                    <a href="{:url('Index/outLogin')}" >
+                                    <a href="<?php echo url('Index/outLogin'); ?>" >
                                         退出登录
                                     </a>
                                 </li>
                                 <li class="dropdown-footer">
-                                    <a href="{:url('Manager/edit')}">
+                                    <a href="<?php echo url('Manager/edit'); ?>">
                                         修改密码
                                     </a>
                                 </li>
