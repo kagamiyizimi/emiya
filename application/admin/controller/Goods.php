@@ -2,17 +2,23 @@
 namespace app\admin\controller;
 
 use app\admin\model\Goods as GoodsModel;
+use app\admin\model\Image as ImageModel;
 use think\Db;
 class Goods extends Base
 {
     public function index()
 
     {
-        $data=db('goods')
+
+//        查询数据
+        $data=Db::table('goods')
             ->alias('a')
-            ->field('a.goods_id,a.goods_name,a.sell_price,a.market_price,a.store,a.freez,a.create_time,a.keywords,a.desc,a.last_modify,a.last_modify_id,a.maketable,a.last_modify_id,a.cate_id,c.name,d.username')
-            ->join('cate c','a.cate_id=c.cate_id','left')
-            ->join('manager d','d.manager_id = a.last_modify_id','left')
+            ->join('manager m','m.manager_id = a.last_modify_id','left')
+            ->join('image i','a.goods_id = i.goods_id','left')
+            ->join('cate c','c.cate_id = a.cate_id','left')
+            ->field('m.username,c.name,i.image_s_url,a.*')
+            ->order('a.goods_id asc')
+//            ->where(['i.is_face'=>1])
             ->paginate(6);
 //        echo db('goods')->getLastSql();exit();
 //
@@ -26,10 +32,11 @@ class Goods extends Base
     {
         $cateData=db('cate')->where('pid',0)->select();
         $this->assign('cateData',$cateData);
+//        $imageData=db('image')->select();
+//        $this->assign('imageData',$imageData);
         //模型遍历分类表数据
         if (request()->isPost()) {
-            //定义数组要添加商品的数据
-//            $id=input('manager_id');
+
             $data = [
                 'goods_name' => input('goods_name'),
                 'desc' => input('desc'),
@@ -40,7 +47,7 @@ class Goods extends Base
                 'store' => input('store'),
                 'freez' => input('freez'),
                 'cate_id'=>input('cate_id'),
-//                'last_modify_id'=>$id,
+//                'last_modify_id'=>$Request.session.manager.manager_id,
                 'create_time' => time(),
                 'last_modify'=>time(),
             ];
@@ -50,24 +57,46 @@ class Goods extends Base
             }else{
                 $data["maketable"]="0";
             }
-//            dump($data);exit();
             //验证器验证
             $validate = \think\Loader::validate('Goods');   //助手函数
             if(!$validate->scene('add')->check($data)){
 
                 return $this->error($validate->getError());
             }
-
-
-            $res= Db::name('goods')->insert($data);
-            if ($res) {
-                return $this->success("添加成功", url("Goods/index"));
-            } else {
-                return $this->error("添加失败");
+            if ($_FILES['image_url']['tmp_name'] != '') {
+                //上传图片
+                $arr = ImageModel::uploadPic('image_url');
+                if ($arr['status'] == 'success') {
+                    $imageData['image_url'] = $arr['url'];
+                } else {
+                    return $this->error($arr['msg']);
+                }
+            }else{
+                return $this->error('未选择图片');
             }
+            //把商品信息加入数据库，返回id
+            $goods_id = GoodsModel::addGoods($data);
+            if (!$goods_id) {
+                $this->error('添加失败');
+            }
+            $imageData['goods_id'] = $goods_id;
+            $imageData['is_face'] = 1;
+            $imageData['image_b_url'] = ImageModel::thumb($imageData['image_url'], $width = 650, $height = 650);
+            $imageData['image_m_url'] = ImageModel::thumb($imageData['image_url'], $width = 240, $height = 240);
+            $imageData['image_s_url'] = ImageModel::thumb($imageData['image_url'], $width = 120, $height = 120);
+            $res = ImageModel::addImage($imageData);
+            if ($res) {
+                return $this->success('添加成功', url('Goods/index'));
+            } else {
+                return $this->error('添加失败');
+            }
+
+
         }
         return $this->fetch();
     }
+
+
 //编辑商品
     public function edit(){
         $id=input('id');

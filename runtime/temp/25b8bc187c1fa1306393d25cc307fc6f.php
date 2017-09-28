@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\goods\add.html";i:1506396258;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\goods\add.html";i:1506566923;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -306,13 +306,13 @@
                                             <p class="help-block col-sm-4 red">* 必填</p>
                                         </div>
                                         <div class="form-group">
-                                            <label for="image_url"
-                                                   class="col-sm-2 control-label no-padding-right">封面图片</label>
+                                            <label for="image_url" class="col-sm-2 control-label no-padding-right">图片</label>
                                             <div class="col-sm-6">
                                                 <input type="file" name="image_url" id="image_url">
+                                                <img src=""  alt="" id="image" width="80" >
                                             </div>
-                                            <p class="help-block col-sm-4 red">* 必填</p>
                                         </div>
+
                                         <div class="form-group">
                                             <label for="cate_id"
                                                    class="col-sm-2 control-label no-padding-right">所属分类</label>

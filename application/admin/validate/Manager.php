@@ -19,7 +19,7 @@ class Manager extends Validate{
         'username.require'=>'用户名不能为空',
         'password.require'=>'密码不能为空'
     ];
-    protected $scence=[
+    protected $scene=[
         'add'=>['username','password'],
         'edit'=>['username'],
         'saveEdit'=>['username']

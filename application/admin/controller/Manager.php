@@ -86,13 +86,13 @@ class Manager extends Base{
         }
 
         //dump($data);exit;
-        $password=input("password");
-        if($password !==""){
-            $data["password"]=md5($password);
-
-        }
+//        $password=input("password");
+//        if($password !==""){
+//            $data["password"]=md5($password);
+//
+//        }
         $validate = \think\Loader::validate('Manager');
-        if(!$validate->check($data)){
+        if(!$validate->scene('edit')->check($data)){
             return $this->error($validate->getError());
         }
         //保存修改数据

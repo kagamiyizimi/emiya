@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\widget\left.html";i:1506397609;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\widget\left.html";i:1506483052;}*/ ?>
 
 <div class="page-sidebar" id="sidebar">
     <!-- Page Sidebar Header-->
@@ -93,7 +93,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/document/index.html">
+                    <a href="<?php echo url('Image/index'); ?>">
                                     <span class="menu-text">
                                         商品图片                                    </span>
                         <i class="menu-expand"></i>
