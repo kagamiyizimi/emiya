@@ -10,7 +10,6 @@ namespace app\admin\controller;
 use think\Controller;
 
 class Login extends Controller{
-
    //加载到登录页面
   public function index(){
      return $this->fetch("Login/login");
@@ -39,10 +38,13 @@ class Login extends Controller{
           return $this->error("验证码错误",url("Login/index"));
        }
        //验证用户
-       $info=db("manager")->where(array("username"=>$data["username"],"lock"=>0))->find();
+       $info=db("manager")->where(array("username"=>$data["username"]))->find();
+       $info2=db("manager")->where(array("lock"=>0,"username"=>$data["username"]))->find();
       //echo db("manager")->getLastSql();exit;
        //dump($info);exit;
-
+       if(!$info2){
+           return $this->error('账号被锁定');
+       }
       if(!isset($info)||empty($info)){
            return $this->error("用户名或密码错误",url("Login/index"));
      }
@@ -54,11 +56,5 @@ class Login extends Controller{
        session("admin",$info);
        //echo $_SESSION["username"];exit();
           return $this->success("登录成功",url("Index/index"));
-
-
   }
-
-
-
-
 }
