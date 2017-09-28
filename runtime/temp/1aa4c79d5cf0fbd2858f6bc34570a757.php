@@ -1,19 +1,18 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"E:\yimishiji\emiya\public/../application/index\view\widget\header.html";i:1506476668;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"E:\yimishiji\emiya\public/../application/index\view\widget\header.html";i:1506563820;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="__STATIC__/index/css/repair.css">
-    <script src="__STATIC__/index/JQ/jquery-3.2.1.min.js"></script>
-    <script src="__STATIC__/index/js/header.js"></script>
-    <link rel="stylesheet" href="__STATIC__/index/css/repair.css">
     <link href="__STATIC__/index/css/footer.css" rel="stylesheet">
     <link rel="stylesheet" href="__STATIC__/index/css/login.css">
     <link rel="stylesheet" href="__STATIC__/index/css/header.css">
     <link rel="stylesheet" href="__STATIC__/index/css/bootstrap.css">
     <link rel="stylesheet" href="__STATIC__/index/css/animate.css">
+    <link rel="stylesheet" href="__STATIC__/index/css/reg.css">
     <script src="__STATIC__/index/JQ/jquery-3.2.1.min.js"></script>
+    <script src="__STATIC__/index/js/header.js"></script>
 </head>
 <body>
 <!--导航栏-->
@@ -187,10 +186,11 @@
             <div class="cart cartsec">
                 <img src="__STATIC__/index/images/header/ym_icon_user.png" width="25" height="auto">
                 <div class="cartdetail">
-                    <div><a href="#">登录</a></div>
-                    <div><a href="#">注册</a></div>
+                    <div><a href="<?php echo url('Login/index'); ?>">登录</a></div>
+                    <div><a href="<?php echo url('Reg/index'); ?>">注册</a></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div style="clear: both"></div>
