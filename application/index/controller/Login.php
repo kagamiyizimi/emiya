@@ -22,35 +22,25 @@ class Login extends Controller{
             "username"=>input("username"),
             "password"=>input("password"),
         ];
-        //如果"username"是字符
         //验证用户
-        $info=db("member")->where(array("username"=>$data["username"]))->find();
-      //dump($data);exit;
-        if(!isset($info)||empty($info)){
-            return $this->error("用户名或密码错误",url("Login/index"));
+        $user=db('member')->where(array('username'=>$data['username']))->find();
+//      如果用户名是电话号码的话，执行登录。
+        if(preg_match('/^1[34578]\d{9}$/',$data["username"])) {
+            //在数据库中查询该号码
+            $num=db("member")->where(array('mobile'=>$data['username']))->find();
+            //通过电话号码查询该用户名
+            $user=db('member')->where(array('mobile'=>$num['mobile']))->find();
+            if($data['username']!=$num['mobile']){
+                return $this->error("请输入正确的手机号码");
+            }
         }
-        //判断密码
-        if($info["password"]!=md5($data["password"])){
-            return $this->error("用户名或密码错误",url("Login/index"));
+        //如果"username"是字符 用户名登录
+        else if(!$user){
+            return $this->error("账号名或者密码错误");
         }
-//
-
-        //如果"username"是电话号码
-        if(preg_match('/^1[34578]\d{9}$/',$data["mobile"])){
-            //符合电话号码就查询信息
-            $info=db("member")->where(array("mobile"=>$data["mobile"]))->find();
-            //echo db("member")->getLastSql();exit;
-            //dump($info);exit;
-//
-        }else{
-            return $this->error("请输入正确的手机号码",url("Login/index"));
-        }
-
-
-        //登录成功,信息存入session
-        session("admin",$info);
+        //将用户名存在session中
+        session("admin",$user);
         return $this->success("登录成功",url("Index/index"));
-
     }
 
 
