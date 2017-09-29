@@ -1,4 +1,8 @@
+<<<<<<< HEAD:runtime/temp/b71670aef29dcf39cf1d29e6f5289541.php
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"E:\UPUPW_NP7.0\htdocs\emiya\public/../application/admin\view\widget\left.html";i:1506483052;}*/ ?>
+=======
 <?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\php_project\test2\emiya\public/../application/admin\view\widget\left.html";i:1506513134;}*/ ?>
+>>>>>>> 0ff0850692f9e537372d4515c60b804bb944b63a:runtime/temp/0531e0e310c58ec109078ec58aae6349.php
 
 <div class="page-sidebar" id="sidebar">
     <!-- Page Sidebar Header-->
@@ -86,7 +90,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/document/index.html">
+                    <a href="<?php echo url('Image/index'); ?>">
                                     <span class="menu-text">
                                         商品图片                                    </span>
                         <i class="menu-expand"></i>

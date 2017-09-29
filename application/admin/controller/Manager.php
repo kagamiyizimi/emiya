@@ -88,6 +88,7 @@ class Manager extends Base {
 
         //dump($data);exit;
 
+
         $validate = \think\Loader::validate('Manager');
 
         if(!$validate->scene("edit")->check($data)){

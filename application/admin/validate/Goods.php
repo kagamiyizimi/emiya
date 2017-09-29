@@ -24,7 +24,7 @@ class Goods extends Validate {
         'freez.require'=>'冷藏库存不能为空',
         'maketable.require'=>'商品上下架状态不能为空',
     ];
-    protected $scence=[
+    protected $scene=[
         'add'=>['goods_name','cate_id','keywords','sell_price','market_price','store','freez','maketable'],
         'edit'=>['goods_name','cate_id','keywords','sell_price','market_price','store','freez','maketable']
     ];
